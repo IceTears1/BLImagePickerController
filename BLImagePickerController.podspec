@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "BLImagePickerController"
+  s.name         = "BlImagePickerLib"
   s.version      = "1.0.1"
   s.summary      = "图片选择器"
 
@@ -89,10 +89,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-s.source_files  = "BLImagePickerController/BlImagePickerController/**/*.{h,m,storyboard}"
+   s.source_files  = "BlImagePickerLib/*.{h,m}"
 #s.exclude_files = "Classes/Exclude"
 
-s.public_header_files = "BLImagePickerController/BlImagePickerController/*.h"
+   s.public_header_files = "BlImagePickerLib/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,7 +104,7 @@ s.public_header_files = "BLImagePickerController/BlImagePickerController/*.h"
   #
 
   # s.resource  = "icon.png"
-  s.resources = "BLImagePickerController/BlImageConfig/Assets/*.png"
+  s.resources = "BlImagePickerLib/Assets/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
