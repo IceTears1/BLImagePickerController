@@ -1,8 +1,8 @@
 # BLImagePickerController
 相片选择器 支持iphone/ipad 兼容横竖屏切换
 效果图
- ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/D9C84B1326C0E9F8CEC31CBCC2474784.png)
- ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/99FD7E1B5D08CC339397D8B0DF3B0F0A.png)
+ ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/list.png)
+ ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/group.png)
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/109F3CE5F9F780A8AB6A37BBE4E1805F.png)
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/2B5A8B83A58398B892CFB4A2FC14C9A8.png)
 1>使用方法
@@ -36,18 +36,27 @@ if (editedImage) {
 @itemSize  拿到的图片的大小
 @默认 原图（比较大慎用）
 */
+
 @property (nonatomic,assign)CGSize itemSize;
+
 /*
 @maxNum  获取图片的数量
 @默认 10
 */
+
+
 @property (nonatomic,assign)NSInteger maxNum;
+
+
 /*
 @imageClipping  图片剪裁
 @默认 NO
 @注意 目前仅限获取相册 单张图片或者相机获取的图片时候使用
 */
+
+
 @property (nonatomic,assign)BOOL imageClipping;
+
 
 /*
 @clippingItemSize  图片剪裁大小
@@ -60,39 +69,52 @@ if (editedImage) {
 
 剪裁方框最大为屏幕的宽高等比缩放
 */
+
 @property (nonatomic,assign)CGSize clippingItemSize;
 
 /*
 @navColor  导航栏的背景颜色
 @默认红色
 */
+
 @property (nonatomic,strong)UIColor *navColor;
+
 /*
 @navColor  导航栏的字体颜色
 @默认白色
 */
+
+
 @property (nonatomic,strong)UIColor *navTitleColor;
 
 /*
 @navColor  导航栏的title
 @默认白色
 */
+
+
 @property (nonatomic,strong)NSString *navTitle;
 
 /*
 @ 显示相机
 */
+
+
 @property (nonatomic,assign)BOOL showCamera;
+
 
 /*
 @无法获取照相机权限时候的提示语
 @默认
 无法获取相机功能请在iphone/ipad的“设置-隐私-相机”选项中允许 “app名字” 访问您的相机"
 */
+
 @property (nonatomic,strong)NSString *cameraMassage;
+
 /*
 @ 无法获取相册权限时候的提示语
 @默认
 无法获取相册功能请在“iphone/ipad“的设置-隐私-相册”选项中允许 ”app名字“ 访问您的相册"
 */
+
 @property (nonatomic,strong)NSString *photoAlbumMassage;
