@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 #  summary should be tweet-length, and the description more in depth.
 #
 
-s.name         = "BlImagePickerLib"
+s.name         = "BLImagePickerLib"
 s.version      = "1.0.0"
 s.summary      = "图片选择器"
 
@@ -89,10 +89,10 @@ s.source       = { :git => "https://github.com/IceTears1/BLImagePickerController
 #  Not including the public_header_files will make all headers public.
 #
 
-s.source_files  = "BlImagePickerLib/*.{h,m}"
+s.source_files  = "BLImagePickerLib/**/*.{h,m}"
 #s.exclude_files = "Classes/Exclude"
 
-s.public_header_files = "BlImagePickerLib/*.h"
+s.public_header_files = "BLImagePickerLib/*.h"
 
 
 # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,8 +104,10 @@ s.public_header_files = "BlImagePickerLib/*.h"
 #
 
 # s.resource  = "icon.png"
-s.resources = "BlImagePickerLib/**/Assets.xcassets"
-#s.resources = "BlImagePickerLib/**/BLImagePicker.storyboard"
+
+s.resource_bundle = {'BLImagePickerLib' => [ 'BlImagePickerLib/**/*.{xcassets,storyboard}' ] }
+
+
 
 # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

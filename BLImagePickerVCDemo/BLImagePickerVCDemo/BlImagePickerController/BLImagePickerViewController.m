@@ -159,7 +159,7 @@
     if (kind == UICollectionElementKindSectionFooter) {
         BLListFooterReusableView *fooView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"BLListFooterReusableView" forIndexPath:indexPath];
         
-        fooView.label.text = [NSString stringWithFormat:@"共%ld张照片",[BLImageHelper shareImageHelper].phassetArr.count];
+        fooView.label.text = [NSString stringWithFormat:@"共%lu张照片",(unsigned long)[BLImageHelper shareImageHelper].phassetArr.count];
         
         return fooView;
     }else{
