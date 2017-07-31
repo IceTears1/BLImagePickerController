@@ -89,10 +89,10 @@ s.source       = { :git => "https://github.com/IceTears1/BLImagePickerController
 #  Not including the public_header_files will make all headers public.
 #
 
-s.source_files  = "BLImagePickerController/BlImagePickerLib/*.{h,m}"
+s.source_files  = "BlImagePickerLib/*.{h,m}"
 #s.exclude_files = "Classes/Exclude"
 
-s.public_header_files = "BLImagePickerController/BlImagePickerLib/*.h"
+s.public_header_files = "BlImagePickerLib/*.h"
 
 
 # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,7 +104,8 @@ s.public_header_files = "BLImagePickerController/BlImagePickerLib/*.h"
 #
 
 # s.resource  = "icon.png"
-s.resources = "BLImagePickerController/BlImagePickerLib/BlImageConfig/Assets/*.png"
+s.resources = "BlImagePickerLib/**/Assets.xcassets"
+#s.resources = "BlImagePickerLib/**/BLImagePicker.storyboard"
 
 # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
