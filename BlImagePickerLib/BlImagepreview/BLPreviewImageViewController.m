@@ -11,7 +11,6 @@
 #import "BLPreviewImageCell.h"
 #import "BLPreviewImageFooterView.h"
 #import "BLPreviewImageHeaderView.h"
-#import "ViewController.h"
 #import "BLPickerConfig.h"
 
 @interface BLPreviewImageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, BLPreviewImageHeaderViewDelegate, UIScrollViewDelegate, BLPreviewImageFooterViewDelegate>
