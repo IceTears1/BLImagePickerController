@@ -89,10 +89,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-s.source_files  = "BlImagePickerController/*.{h,m,storyboard,xcassets}"
+s.source_files  = "BLImagePickerController/BlImagePickerController/**/*.{h,m,storyboard}"
 #s.exclude_files = "Classes/Exclude"
 
-s.public_header_files = "BlImagePickerController/*.h"
+s.public_header_files = "BLImagePickerController/BlImagePickerController/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,7 +104,7 @@ s.public_header_files = "BlImagePickerController/*.h"
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "BLImagePickerController/BlImageConfig/Assets/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
