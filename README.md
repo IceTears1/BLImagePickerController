@@ -6,29 +6,24 @@
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/109F3CE5F9F780A8AB6A37BBE4E1805F.png)
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/2B5A8B83A58398B892CFB4A2FC14C9A8.png)
 1>使用方法
+
 BLImagePickerViewController *imgVc = [[BLImagePickerViewController alloc]init];
-UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:imgVc];
-BLImagePickerViewController *imgVc = [[BLImagePickerViewController alloc]init];
+
 UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:imgVc];
 
+BLImagePickerViewController *imgVc = [[BLImagePickerViewController alloc]init];
 
-__weak typeof(self) weakSelf = self;
+UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:imgVc];
 
 [imgVc initDataProgress:^(CGFloat progress) {
 
 
 } finished:^(NSArray<UIImage *> *resultAry, NSArray<PHAsset *> *assetsArry, UIImage *editedImage) {
 
-if (resultAry) {
-
-}
-if (editedImage) {
-
-}
-
 } cancle:^(NSString *cancleStr) {
 
 }];
+
 [self presentViewController:nav animated:YES completion:nil];
 
 2>配置参数
