@@ -1,0 +1,933 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C5D83929C97C2F216AD984A /* libPods-BLImagePickerVCDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2792316F50A06CE8E12B3F3B /* libPods-BLImagePickerVCDemo.a */; };
+		7EAE50F7230BB1F1A5D11A1D /* libPods-BLImagePickerVCDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4434036F3495CB2CD8D2FE /* libPods-BLImagePickerVCDemoUITests.a */; };
+		8D03D7011F2EF48F00BC0CF5 /* SelectedImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03D7001F2EF48F00BC0CF5 /* SelectedImageVC.m */; };
+		8DB07C921F2ECABF00EDA00E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07C911F2ECABF00EDA00E /* main.m */; };
+		8DB07C951F2ECABF00EDA00E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07C941F2ECABF00EDA00E /* AppDelegate.m */; };
+		8DB07C981F2ECABF00EDA00E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07C971F2ECABF00EDA00E /* ViewController.m */; };
+		8DB07C9B1F2ECABF00EDA00E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB07C991F2ECABF00EDA00E /* Main.storyboard */; };
+		8DB07C9D1F2ECABF00EDA00E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB07C9C1F2ECABF00EDA00E /* Assets.xcassets */; };
+		8DB07CA01F2ECABF00EDA00E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB07C9E1F2ECABF00EDA00E /* LaunchScreen.storyboard */; };
+		8DB07CAB1F2ECABF00EDA00E /* BLImagePickerVCDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CAA1F2ECABF00EDA00E /* BLImagePickerVCDemoTests.m */; };
+		8DB07CB61F2ECABF00EDA00E /* BLImagePickerVCDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CB51F2ECABF00EDA00E /* BLImagePickerVCDemoUITests.m */; };
+		8DB07CF91F2ECB2600EDA00E /* BLImageClipingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CC61F2ECB2600EDA00E /* BLImageClipingViewController.m */; };
+		8DB07CFA1F2ECB2600EDA00E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB07CC81F2ECB2600EDA00E /* Assets.xcassets */; };
+		8DB07CFB1F2ECB2600EDA00E /* BLImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CCA1F2ECB2600EDA00E /* BLImageHelper.m */; };
+		8DB07CFC1F2ECB2600EDA00E /* BLPickerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CCC1F2ECB2600EDA00E /* BLPickerBaseViewController.m */; };
+		8DB07CFD1F2ECB2600EDA00E /* PHAsset+AddFlag.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CCF1F2ECB2600EDA00E /* PHAsset+AddFlag.m */; };
+		8DB07CFE1F2ECB2600EDA00E /* BLImagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB07CD11F2ECB2600EDA00E /* BLImagePicker.storyboard */; };
+		8DB07CFF1F2ECB2600EDA00E /* BLListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CD31F2ECB2600EDA00E /* BLListCollectionViewCell.m */; };
+		8DB07D001F2ECB2600EDA00E /* BLListFooterReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CD51F2ECB2600EDA00E /* BLListFooterReusableView.m */; };
+		8DB07D011F2ECB2600EDA00E /* BLPhotoListFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CD71F2ECB2600EDA00E /* BLPhotoListFooterView.m */; };
+		8DB07D021F2ECB2600EDA00E /* BLImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CD91F2ECB2600EDA00E /* BLImagePickerViewController.m */; };
+		8DB07D031F2ECB2600EDA00E /* BLPreviewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CDC1F2ECB2600EDA00E /* BLPreviewImageCell.m */; };
+		8DB07D041F2ECB2600EDA00E /* BLPreviewImageFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CDE1F2ECB2600EDA00E /* BLPreviewImageFooterView.m */; };
+		8DB07D051F2ECB2600EDA00E /* BLPreviewImageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CE01F2ECB2600EDA00E /* BLPreviewImageHeaderView.m */; };
+		8DB07D061F2ECB2600EDA00E /* BLPreviewImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CE21F2ECB2600EDA00E /* BLPreviewImageViewController.m */; };
+		8DB07D071F2ECB2600EDA00E /* BLImageGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CE51F2ECB2600EDA00E /* BLImageGroupViewController.m */; };
+		8DB07D081F2ECB2600EDA00E /* BLPhotoGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CE71F2ECB2600EDA00E /* BLPhotoGroupCell.m */; };
+		8DB07D091F2ECB2600EDA00E /* BLDIYTrasitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CEA1F2ECB2600EDA00E /* BLDIYTrasitionAnimation.m */; };
+		8DB07D0A1F2ECB2600EDA00E /* BLPresentTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CEC1F2ECB2600EDA00E /* BLPresentTransitionAnimator.m */; };
+		8DB07D0B1F2ECB2600EDA00E /* BLPushTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CEE1F2ECB2600EDA00E /* BLPushTransitionAnimator.m */; };
+		8DB07D0C1F2ECB2600EDA00E /* BLTabBarTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CF01F2ECB2600EDA00E /* BLTabBarTransitionAnimator.m */; };
+		8DB07D0D1F2ECB2600EDA00E /* BLTransitionInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CF31F2ECB2600EDA00E /* BLTransitionInteraction.m */; };
+		8DB07D0E1F2ECB2600EDA00E /* UINavigationController+BLPushTrasition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CF61F2ECB2600EDA00E /* UINavigationController+BLPushTrasition.m */; };
+		8DB07D0F1F2ECB2600EDA00E /* UIViewController+BLPresentTrasition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07CF81F2ECB2600EDA00E /* UIViewController+BLPresentTrasition.m */; };
+		C0C4D8D4AF5AEBA45AD6042F /* libPods-BLImagePickerVCDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DB7BEEF96D106D0A659147 /* libPods-BLImagePickerVCDemoTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8DB07CA71F2ECABF00EDA00E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB07C851F2ECABF00EDA00E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DB07C8C1F2ECABF00EDA00E;
+			remoteInfo = BLImagePickerVCDemo;
+		};
+		8DB07CB21F2ECABF00EDA00E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB07C851F2ECABF00EDA00E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DB07C8C1F2ECABF00EDA00E;
+			remoteInfo = BLImagePickerVCDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2792316F50A06CE8E12B3F3B /* libPods-BLImagePickerVCDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLImagePickerVCDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49DB7BEEF96D106D0A659147 /* libPods-BLImagePickerVCDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLImagePickerVCDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA4494D2E398CD019DD24AB /* Pods-BLImagePickerVCDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLImagePickerVCDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLImagePickerVCDemoUITests/Pods-BLImagePickerVCDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E4434036F3495CB2CD8D2FE /* libPods-BLImagePickerVCDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLImagePickerVCDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D03D6FF1F2EF48F00BC0CF5 /* SelectedImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedImageVC.h; sourceTree = "<group>"; };
+		8D03D7001F2EF48F00BC0CF5 /* SelectedImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedImageVC.m; sourceTree = "<group>"; };
+		8DB07C8D1F2ECABF00EDA00E /* BLImagePickerVCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLImagePickerVCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB07C911F2ECABF00EDA00E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8DB07C931F2ECABF00EDA00E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8DB07C941F2ECABF00EDA00E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8DB07C961F2ECABF00EDA00E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8DB07C971F2ECABF00EDA00E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8DB07C9A1F2ECABF00EDA00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8DB07C9C1F2ECABF00EDA00E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DB07C9F1F2ECABF00EDA00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8DB07CA11F2ECABF00EDA00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB07CA61F2ECABF00EDA00E /* BLImagePickerVCDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLImagePickerVCDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB07CAA1F2ECABF00EDA00E /* BLImagePickerVCDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLImagePickerVCDemoTests.m; sourceTree = "<group>"; };
+		8DB07CAC1F2ECABF00EDA00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB07CB11F2ECABF00EDA00E /* BLImagePickerVCDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLImagePickerVCDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB07CB51F2ECABF00EDA00E /* BLImagePickerVCDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLImagePickerVCDemoUITests.m; sourceTree = "<group>"; };
+		8DB07CB71F2ECABF00EDA00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB07CC51F2ECB2600EDA00E /* BLImageClipingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLImageClipingViewController.h; sourceTree = "<group>"; };
+		8DB07CC61F2ECB2600EDA00E /* BLImageClipingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLImageClipingViewController.m; sourceTree = "<group>"; };
+		8DB07CC81F2ECB2600EDA00E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DB07CC91F2ECB2600EDA00E /* BLImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLImageHelper.h; sourceTree = "<group>"; };
+		8DB07CCA1F2ECB2600EDA00E /* BLImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLImageHelper.m; sourceTree = "<group>"; };
+		8DB07CCB1F2ECB2600EDA00E /* BLPickerBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPickerBaseViewController.h; sourceTree = "<group>"; };
+		8DB07CCC1F2ECB2600EDA00E /* BLPickerBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPickerBaseViewController.m; sourceTree = "<group>"; };
+		8DB07CCD1F2ECB2600EDA00E /* BLPickerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPickerConfig.h; sourceTree = "<group>"; };
+		8DB07CCE1F2ECB2600EDA00E /* PHAsset+AddFlag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+AddFlag.h"; sourceTree = "<group>"; };
+		8DB07CCF1F2ECB2600EDA00E /* PHAsset+AddFlag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+AddFlag.m"; sourceTree = "<group>"; };
+		8DB07CD11F2ECB2600EDA00E /* BLImagePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BLImagePicker.storyboard; sourceTree = "<group>"; };
+		8DB07CD21F2ECB2600EDA00E /* BLListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLListCollectionViewCell.h; sourceTree = "<group>"; };
+		8DB07CD31F2ECB2600EDA00E /* BLListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLListCollectionViewCell.m; sourceTree = "<group>"; };
+		8DB07CD41F2ECB2600EDA00E /* BLListFooterReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLListFooterReusableView.h; sourceTree = "<group>"; };
+		8DB07CD51F2ECB2600EDA00E /* BLListFooterReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLListFooterReusableView.m; sourceTree = "<group>"; };
+		8DB07CD61F2ECB2600EDA00E /* BLPhotoListFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPhotoListFooterView.h; sourceTree = "<group>"; };
+		8DB07CD71F2ECB2600EDA00E /* BLPhotoListFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPhotoListFooterView.m; sourceTree = "<group>"; };
+		8DB07CD81F2ECB2600EDA00E /* BLImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLImagePickerViewController.h; sourceTree = "<group>"; };
+		8DB07CD91F2ECB2600EDA00E /* BLImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLImagePickerViewController.m; sourceTree = "<group>"; };
+		8DB07CDB1F2ECB2600EDA00E /* BLPreviewImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPreviewImageCell.h; sourceTree = "<group>"; };
+		8DB07CDC1F2ECB2600EDA00E /* BLPreviewImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPreviewImageCell.m; sourceTree = "<group>"; };
+		8DB07CDD1F2ECB2600EDA00E /* BLPreviewImageFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPreviewImageFooterView.h; sourceTree = "<group>"; };
+		8DB07CDE1F2ECB2600EDA00E /* BLPreviewImageFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPreviewImageFooterView.m; sourceTree = "<group>"; };
+		8DB07CDF1F2ECB2600EDA00E /* BLPreviewImageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPreviewImageHeaderView.h; sourceTree = "<group>"; };
+		8DB07CE01F2ECB2600EDA00E /* BLPreviewImageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPreviewImageHeaderView.m; sourceTree = "<group>"; };
+		8DB07CE11F2ECB2600EDA00E /* BLPreviewImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPreviewImageViewController.h; sourceTree = "<group>"; };
+		8DB07CE21F2ECB2600EDA00E /* BLPreviewImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPreviewImageViewController.m; sourceTree = "<group>"; };
+		8DB07CE41F2ECB2600EDA00E /* BLImageGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLImageGroupViewController.h; sourceTree = "<group>"; };
+		8DB07CE51F2ECB2600EDA00E /* BLImageGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLImageGroupViewController.m; sourceTree = "<group>"; };
+		8DB07CE61F2ECB2600EDA00E /* BLPhotoGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPhotoGroupCell.h; sourceTree = "<group>"; };
+		8DB07CE71F2ECB2600EDA00E /* BLPhotoGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPhotoGroupCell.m; sourceTree = "<group>"; };
+		8DB07CE91F2ECB2600EDA00E /* BLDIYTrasitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDIYTrasitionAnimation.h; sourceTree = "<group>"; };
+		8DB07CEA1F2ECB2600EDA00E /* BLDIYTrasitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDIYTrasitionAnimation.m; sourceTree = "<group>"; };
+		8DB07CEB1F2ECB2600EDA00E /* BLPresentTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPresentTransitionAnimator.h; sourceTree = "<group>"; };
+		8DB07CEC1F2ECB2600EDA00E /* BLPresentTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPresentTransitionAnimator.m; sourceTree = "<group>"; };
+		8DB07CED1F2ECB2600EDA00E /* BLPushTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPushTransitionAnimator.h; sourceTree = "<group>"; };
+		8DB07CEE1F2ECB2600EDA00E /* BLPushTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLPushTransitionAnimator.m; sourceTree = "<group>"; };
+		8DB07CEF1F2ECB2600EDA00E /* BLTabBarTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTabBarTransitionAnimator.h; sourceTree = "<group>"; };
+		8DB07CF01F2ECB2600EDA00E /* BLTabBarTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTabBarTransitionAnimator.m; sourceTree = "<group>"; };
+		8DB07CF11F2ECB2600EDA00E /* BLTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTransitionAnimator.h; sourceTree = "<group>"; };
+		8DB07CF21F2ECB2600EDA00E /* BLTransitionInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTransitionInteraction.h; sourceTree = "<group>"; };
+		8DB07CF31F2ECB2600EDA00E /* BLTransitionInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTransitionInteraction.m; sourceTree = "<group>"; };
+		8DB07CF41F2ECB2600EDA00E /* BLTrasitionAnimatorConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTrasitionAnimatorConfig.h; sourceTree = "<group>"; };
+		8DB07CF51F2ECB2600EDA00E /* UINavigationController+BLPushTrasition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+BLPushTrasition.h"; sourceTree = "<group>"; };
+		8DB07CF61F2ECB2600EDA00E /* UINavigationController+BLPushTrasition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+BLPushTrasition.m"; sourceTree = "<group>"; };
+		8DB07CF71F2ECB2600EDA00E /* UIViewController+BLPresentTrasition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BLPresentTrasition.h"; sourceTree = "<group>"; };
+		8DB07CF81F2ECB2600EDA00E /* UIViewController+BLPresentTrasition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BLPresentTrasition.m"; sourceTree = "<group>"; };
+		A0EB608D903561005FF9812B /* Pods-BLImagePickerVCDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLImagePickerVCDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLImagePickerVCDemoTests/Pods-BLImagePickerVCDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0B87A2C6AA225EDB07B65F1 /* Pods-BLImagePickerVCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLImagePickerVCDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLImagePickerVCDemoUITests/Pods-BLImagePickerVCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C3D5E8E9B2E673F713B92FA2 /* Pods-BLImagePickerVCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLImagePickerVCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLImagePickerVCDemo/Pods-BLImagePickerVCDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D0F54BEA9C12AF5CB1EF9362 /* Pods-BLImagePickerVCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLImagePickerVCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLImagePickerVCDemo/Pods-BLImagePickerVCDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		ECCCC3FA542B797A00310EC7 /* Pods-BLImagePickerVCDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLImagePickerVCDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLImagePickerVCDemoTests/Pods-BLImagePickerVCDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DB07C8A1F2ECABF00EDA00E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C5D83929C97C2F216AD984A /* libPods-BLImagePickerVCDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB07CA31F2ECABF00EDA00E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C4D8D4AF5AEBA45AD6042F /* libPods-BLImagePickerVCDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB07CAE1F2ECABF00EDA00E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAE50F7230BB1F1A5D11A1D /* libPods-BLImagePickerVCDemoUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AED9F02F0210ED054A41386 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0F54BEA9C12AF5CB1EF9362 /* Pods-BLImagePickerVCDemo.debug.xcconfig */,
+				C3D5E8E9B2E673F713B92FA2 /* Pods-BLImagePickerVCDemo.release.xcconfig */,
+				A0EB608D903561005FF9812B /* Pods-BLImagePickerVCDemoTests.debug.xcconfig */,
+				ECCCC3FA542B797A00310EC7 /* Pods-BLImagePickerVCDemoTests.release.xcconfig */,
+				7DA4494D2E398CD019DD24AB /* Pods-BLImagePickerVCDemoUITests.debug.xcconfig */,
+				C0B87A2C6AA225EDB07B65F1 /* Pods-BLImagePickerVCDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		65B85DBFCC8F4A70B3A08237 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2792316F50A06CE8E12B3F3B /* libPods-BLImagePickerVCDemo.a */,
+				49DB7BEEF96D106D0A659147 /* libPods-BLImagePickerVCDemoTests.a */,
+				7E4434036F3495CB2CD8D2FE /* libPods-BLImagePickerVCDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DB07C841F2ECABF00EDA00E = {
+			isa = PBXGroup;
+			children = (
+				8DB07C8F1F2ECABF00EDA00E /* BLImagePickerVCDemo */,
+				8DB07CA91F2ECABF00EDA00E /* BLImagePickerVCDemoTests */,
+				8DB07CB41F2ECABF00EDA00E /* BLImagePickerVCDemoUITests */,
+				8DB07C8E1F2ECABF00EDA00E /* Products */,
+				3AED9F02F0210ED054A41386 /* Pods */,
+				65B85DBFCC8F4A70B3A08237 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8DB07C8E1F2ECABF00EDA00E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07C8D1F2ECABF00EDA00E /* BLImagePickerVCDemo.app */,
+				8DB07CA61F2ECABF00EDA00E /* BLImagePickerVCDemoTests.xctest */,
+				8DB07CB11F2ECABF00EDA00E /* BLImagePickerVCDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DB07C8F1F2ECABF00EDA00E /* BLImagePickerVCDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CC31F2ECB2600EDA00E /* BlImagePickerController */,
+				8DB07C931F2ECABF00EDA00E /* AppDelegate.h */,
+				8DB07C941F2ECABF00EDA00E /* AppDelegate.m */,
+				8DB07C961F2ECABF00EDA00E /* ViewController.h */,
+				8DB07C971F2ECABF00EDA00E /* ViewController.m */,
+				8D03D6FF1F2EF48F00BC0CF5 /* SelectedImageVC.h */,
+				8D03D7001F2EF48F00BC0CF5 /* SelectedImageVC.m */,
+				8DB07C991F2ECABF00EDA00E /* Main.storyboard */,
+				8DB07C9C1F2ECABF00EDA00E /* Assets.xcassets */,
+				8DB07C9E1F2ECABF00EDA00E /* LaunchScreen.storyboard */,
+				8DB07CA11F2ECABF00EDA00E /* Info.plist */,
+				8DB07C901F2ECABF00EDA00E /* Supporting Files */,
+			);
+			path = BLImagePickerVCDemo;
+			sourceTree = "<group>";
+		};
+		8DB07C901F2ECABF00EDA00E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07C911F2ECABF00EDA00E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8DB07CA91F2ECABF00EDA00E /* BLImagePickerVCDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CAA1F2ECABF00EDA00E /* BLImagePickerVCDemoTests.m */,
+				8DB07CAC1F2ECABF00EDA00E /* Info.plist */,
+			);
+			path = BLImagePickerVCDemoTests;
+			sourceTree = "<group>";
+		};
+		8DB07CB41F2ECABF00EDA00E /* BLImagePickerVCDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CB51F2ECABF00EDA00E /* BLImagePickerVCDemoUITests.m */,
+				8DB07CB71F2ECABF00EDA00E /* Info.plist */,
+			);
+			path = BLImagePickerVCDemoUITests;
+			sourceTree = "<group>";
+		};
+		8DB07CC31F2ECB2600EDA00E /* BlImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CC41F2ECB2600EDA00E /* BlImageClipping */,
+				8DB07CC71F2ECB2600EDA00E /* BlImageConfig */,
+				8DB07CD01F2ECB2600EDA00E /* BlImageList */,
+				8DB07CD81F2ECB2600EDA00E /* BLImagePickerViewController.h */,
+				8DB07CD91F2ECB2600EDA00E /* BLImagePickerViewController.m */,
+				8DB07CDA1F2ECB2600EDA00E /* BlImagepreview */,
+				8DB07CE31F2ECB2600EDA00E /* BlPhotoAlbum */,
+				8DB07CE81F2ECB2600EDA00E /* BLTransitionAnimation */,
+			);
+			path = BlImagePickerController;
+			sourceTree = "<group>";
+		};
+		8DB07CC41F2ECB2600EDA00E /* BlImageClipping */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CC51F2ECB2600EDA00E /* BLImageClipingViewController.h */,
+				8DB07CC61F2ECB2600EDA00E /* BLImageClipingViewController.m */,
+			);
+			path = BlImageClipping;
+			sourceTree = "<group>";
+		};
+		8DB07CC71F2ECB2600EDA00E /* BlImageConfig */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CC81F2ECB2600EDA00E /* Assets.xcassets */,
+				8DB07CC91F2ECB2600EDA00E /* BLImageHelper.h */,
+				8DB07CCA1F2ECB2600EDA00E /* BLImageHelper.m */,
+				8DB07CCB1F2ECB2600EDA00E /* BLPickerBaseViewController.h */,
+				8DB07CCC1F2ECB2600EDA00E /* BLPickerBaseViewController.m */,
+				8DB07CCD1F2ECB2600EDA00E /* BLPickerConfig.h */,
+				8DB07CCE1F2ECB2600EDA00E /* PHAsset+AddFlag.h */,
+				8DB07CCF1F2ECB2600EDA00E /* PHAsset+AddFlag.m */,
+			);
+			path = BlImageConfig;
+			sourceTree = "<group>";
+		};
+		8DB07CD01F2ECB2600EDA00E /* BlImageList */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CD11F2ECB2600EDA00E /* BLImagePicker.storyboard */,
+				8DB07CD21F2ECB2600EDA00E /* BLListCollectionViewCell.h */,
+				8DB07CD31F2ECB2600EDA00E /* BLListCollectionViewCell.m */,
+				8DB07CD41F2ECB2600EDA00E /* BLListFooterReusableView.h */,
+				8DB07CD51F2ECB2600EDA00E /* BLListFooterReusableView.m */,
+				8DB07CD61F2ECB2600EDA00E /* BLPhotoListFooterView.h */,
+				8DB07CD71F2ECB2600EDA00E /* BLPhotoListFooterView.m */,
+			);
+			path = BlImageList;
+			sourceTree = "<group>";
+		};
+		8DB07CDA1F2ECB2600EDA00E /* BlImagepreview */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CDB1F2ECB2600EDA00E /* BLPreviewImageCell.h */,
+				8DB07CDC1F2ECB2600EDA00E /* BLPreviewImageCell.m */,
+				8DB07CDD1F2ECB2600EDA00E /* BLPreviewImageFooterView.h */,
+				8DB07CDE1F2ECB2600EDA00E /* BLPreviewImageFooterView.m */,
+				8DB07CDF1F2ECB2600EDA00E /* BLPreviewImageHeaderView.h */,
+				8DB07CE01F2ECB2600EDA00E /* BLPreviewImageHeaderView.m */,
+				8DB07CE11F2ECB2600EDA00E /* BLPreviewImageViewController.h */,
+				8DB07CE21F2ECB2600EDA00E /* BLPreviewImageViewController.m */,
+			);
+			path = BlImagepreview;
+			sourceTree = "<group>";
+		};
+		8DB07CE31F2ECB2600EDA00E /* BlPhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CE41F2ECB2600EDA00E /* BLImageGroupViewController.h */,
+				8DB07CE51F2ECB2600EDA00E /* BLImageGroupViewController.m */,
+				8DB07CE61F2ECB2600EDA00E /* BLPhotoGroupCell.h */,
+				8DB07CE71F2ECB2600EDA00E /* BLPhotoGroupCell.m */,
+			);
+			path = BlPhotoAlbum;
+			sourceTree = "<group>";
+		};
+		8DB07CE81F2ECB2600EDA00E /* BLTransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				8DB07CE91F2ECB2600EDA00E /* BLDIYTrasitionAnimation.h */,
+				8DB07CEA1F2ECB2600EDA00E /* BLDIYTrasitionAnimation.m */,
+				8DB07CEB1F2ECB2600EDA00E /* BLPresentTransitionAnimator.h */,
+				8DB07CEC1F2ECB2600EDA00E /* BLPresentTransitionAnimator.m */,
+				8DB07CED1F2ECB2600EDA00E /* BLPushTransitionAnimator.h */,
+				8DB07CEE1F2ECB2600EDA00E /* BLPushTransitionAnimator.m */,
+				8DB07CEF1F2ECB2600EDA00E /* BLTabBarTransitionAnimator.h */,
+				8DB07CF01F2ECB2600EDA00E /* BLTabBarTransitionAnimator.m */,
+				8DB07CF11F2ECB2600EDA00E /* BLTransitionAnimator.h */,
+				8DB07CF21F2ECB2600EDA00E /* BLTransitionInteraction.h */,
+				8DB07CF31F2ECB2600EDA00E /* BLTransitionInteraction.m */,
+				8DB07CF41F2ECB2600EDA00E /* BLTrasitionAnimatorConfig.h */,
+				8DB07CF51F2ECB2600EDA00E /* UINavigationController+BLPushTrasition.h */,
+				8DB07CF61F2ECB2600EDA00E /* UINavigationController+BLPushTrasition.m */,
+				8DB07CF71F2ECB2600EDA00E /* UIViewController+BLPresentTrasition.h */,
+				8DB07CF81F2ECB2600EDA00E /* UIViewController+BLPresentTrasition.m */,
+			);
+			path = BLTransitionAnimation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DB07C8C1F2ECABF00EDA00E /* BLImagePickerVCDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DB07CBA1F2ECABF00EDA00E /* Build configuration list for PBXNativeTarget "BLImagePickerVCDemo" */;
+			buildPhases = (
+				4C2B2582E1AAA73B76DE50B6 /* [CP] Check Pods Manifest.lock */,
+				8DB07C891F2ECABF00EDA00E /* Sources */,
+				8DB07C8A1F2ECABF00EDA00E /* Frameworks */,
+				8DB07C8B1F2ECABF00EDA00E /* Resources */,
+				1DDAB816C3BBB62F91ACA177 /* [CP] Embed Pods Frameworks */,
+				E7D23EBD0DB12A9BE9145217 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLImagePickerVCDemo;
+			productName = BLImagePickerVCDemo;
+			productReference = 8DB07C8D1F2ECABF00EDA00E /* BLImagePickerVCDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8DB07CA51F2ECABF00EDA00E /* BLImagePickerVCDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DB07CBD1F2ECABF00EDA00E /* Build configuration list for PBXNativeTarget "BLImagePickerVCDemoTests" */;
+			buildPhases = (
+				6675123F080801C908311817 /* [CP] Check Pods Manifest.lock */,
+				8DB07CA21F2ECABF00EDA00E /* Sources */,
+				8DB07CA31F2ECABF00EDA00E /* Frameworks */,
+				8DB07CA41F2ECABF00EDA00E /* Resources */,
+				E41C01586C61C4FEDBA4EECB /* [CP] Embed Pods Frameworks */,
+				F284D4BF32667D7239F821B0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DB07CA81F2ECABF00EDA00E /* PBXTargetDependency */,
+			);
+			name = BLImagePickerVCDemoTests;
+			productName = BLImagePickerVCDemoTests;
+			productReference = 8DB07CA61F2ECABF00EDA00E /* BLImagePickerVCDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8DB07CB01F2ECABF00EDA00E /* BLImagePickerVCDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DB07CC01F2ECABF00EDA00E /* Build configuration list for PBXNativeTarget "BLImagePickerVCDemoUITests" */;
+			buildPhases = (
+				EF8E34CEDC51F22319637A6B /* [CP] Check Pods Manifest.lock */,
+				8DB07CAD1F2ECABF00EDA00E /* Sources */,
+				8DB07CAE1F2ECABF00EDA00E /* Frameworks */,
+				8DB07CAF1F2ECABF00EDA00E /* Resources */,
+				6AE839A9F4341EF080F6104F /* [CP] Embed Pods Frameworks */,
+				82689F65F373FE9777C88B4D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DB07CB31F2ECABF00EDA00E /* PBXTargetDependency */,
+			);
+			name = BLImagePickerVCDemoUITests;
+			productName = BLImagePickerVCDemoUITests;
+			productReference = 8DB07CB11F2ECABF00EDA00E /* BLImagePickerVCDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DB07C851F2ECABF00EDA00E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "冰泪";
+				TargetAttributes = {
+					8DB07C8C1F2ECABF00EDA00E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = E4A85X89FN;
+						ProvisioningStyle = Automatic;
+					};
+					8DB07CA51F2ECABF00EDA00E = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8DB07C8C1F2ECABF00EDA00E;
+					};
+					8DB07CB01F2ECABF00EDA00E = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8DB07C8C1F2ECABF00EDA00E;
+					};
+				};
+			};
+			buildConfigurationList = 8DB07C881F2ECABF00EDA00E /* Build configuration list for PBXProject "BLImagePickerVCDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8DB07C841F2ECABF00EDA00E;
+			productRefGroup = 8DB07C8E1F2ECABF00EDA00E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DB07C8C1F2ECABF00EDA00E /* BLImagePickerVCDemo */,
+				8DB07CA51F2ECABF00EDA00E /* BLImagePickerVCDemoTests */,
+				8DB07CB01F2ECABF00EDA00E /* BLImagePickerVCDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DB07C8B1F2ECABF00EDA00E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DB07CFE1F2ECB2600EDA00E /* BLImagePicker.storyboard in Resources */,
+				8DB07CA01F2ECABF00EDA00E /* LaunchScreen.storyboard in Resources */,
+				8DB07C9D1F2ECABF00EDA00E /* Assets.xcassets in Resources */,
+				8DB07CFA1F2ECB2600EDA00E /* Assets.xcassets in Resources */,
+				8DB07C9B1F2ECABF00EDA00E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB07CA41F2ECABF00EDA00E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB07CAF1F2ECABF00EDA00E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DDAB816C3BBB62F91ACA177 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLImagePickerVCDemo/Pods-BLImagePickerVCDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C2B2582E1AAA73B76DE50B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6675123F080801C908311817 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AE839A9F4341EF080F6104F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLImagePickerVCDemoUITests/Pods-BLImagePickerVCDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82689F65F373FE9777C88B4D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLImagePickerVCDemoUITests/Pods-BLImagePickerVCDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E41C01586C61C4FEDBA4EECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLImagePickerVCDemoTests/Pods-BLImagePickerVCDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D23EBD0DB12A9BE9145217 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLImagePickerVCDemo/Pods-BLImagePickerVCDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF8E34CEDC51F22319637A6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F284D4BF32667D7239F821B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLImagePickerVCDemoTests/Pods-BLImagePickerVCDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DB07C891F2ECABF00EDA00E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DB07D0E1F2ECB2600EDA00E /* UINavigationController+BLPushTrasition.m in Sources */,
+				8DB07CFD1F2ECB2600EDA00E /* PHAsset+AddFlag.m in Sources */,
+				8DB07CFB1F2ECB2600EDA00E /* BLImageHelper.m in Sources */,
+				8DB07D051F2ECB2600EDA00E /* BLPreviewImageHeaderView.m in Sources */,
+				8DB07D0F1F2ECB2600EDA00E /* UIViewController+BLPresentTrasition.m in Sources */,
+				8DB07D011F2ECB2600EDA00E /* BLPhotoListFooterView.m in Sources */,
+				8DB07D071F2ECB2600EDA00E /* BLImageGroupViewController.m in Sources */,
+				8DB07D0B1F2ECB2600EDA00E /* BLPushTransitionAnimator.m in Sources */,
+				8DB07D0A1F2ECB2600EDA00E /* BLPresentTransitionAnimator.m in Sources */,
+				8DB07C981F2ECABF00EDA00E /* ViewController.m in Sources */,
+				8DB07D001F2ECB2600EDA00E /* BLListFooterReusableView.m in Sources */,
+				8D03D7011F2EF48F00BC0CF5 /* SelectedImageVC.m in Sources */,
+				8DB07C951F2ECABF00EDA00E /* AppDelegate.m in Sources */,
+				8DB07D061F2ECB2600EDA00E /* BLPreviewImageViewController.m in Sources */,
+				8DB07D031F2ECB2600EDA00E /* BLPreviewImageCell.m in Sources */,
+				8DB07D081F2ECB2600EDA00E /* BLPhotoGroupCell.m in Sources */,
+				8DB07D0C1F2ECB2600EDA00E /* BLTabBarTransitionAnimator.m in Sources */,
+				8DB07D091F2ECB2600EDA00E /* BLDIYTrasitionAnimation.m in Sources */,
+				8DB07CFC1F2ECB2600EDA00E /* BLPickerBaseViewController.m in Sources */,
+				8DB07C921F2ECABF00EDA00E /* main.m in Sources */,
+				8DB07D021F2ECB2600EDA00E /* BLImagePickerViewController.m in Sources */,
+				8DB07D041F2ECB2600EDA00E /* BLPreviewImageFooterView.m in Sources */,
+				8DB07D0D1F2ECB2600EDA00E /* BLTransitionInteraction.m in Sources */,
+				8DB07CFF1F2ECB2600EDA00E /* BLListCollectionViewCell.m in Sources */,
+				8DB07CF91F2ECB2600EDA00E /* BLImageClipingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB07CA21F2ECABF00EDA00E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DB07CAB1F2ECABF00EDA00E /* BLImagePickerVCDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB07CAD1F2ECABF00EDA00E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DB07CB61F2ECABF00EDA00E /* BLImagePickerVCDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DB07CA81F2ECABF00EDA00E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DB07C8C1F2ECABF00EDA00E /* BLImagePickerVCDemo */;
+			targetProxy = 8DB07CA71F2ECABF00EDA00E /* PBXContainerItemProxy */;
+		};
+		8DB07CB31F2ECABF00EDA00E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DB07C8C1F2ECABF00EDA00E /* BLImagePickerVCDemo */;
+			targetProxy = 8DB07CB21F2ECABF00EDA00E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8DB07C991F2ECABF00EDA00E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DB07C9A1F2ECABF00EDA00E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8DB07C9E1F2ECABF00EDA00E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DB07C9F1F2ECABF00EDA00E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8DB07CB81F2ECABF00EDA00E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8DB07CB91F2ECABF00EDA00E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8DB07CBB1F2ECABF00EDA00E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0F54BEA9C12AF5CB1EF9362 /* Pods-BLImagePickerVCDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E4A85X89FN;
+				INFOPLIST_FILE = BLImagePickerVCDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = binglei.BLImagePickerVCDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DB07CBC1F2ECABF00EDA00E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D5E8E9B2E673F713B92FA2 /* Pods-BLImagePickerVCDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E4A85X89FN;
+				INFOPLIST_FILE = BLImagePickerVCDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = binglei.BLImagePickerVCDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8DB07CBE1F2ECABF00EDA00E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0EB608D903561005FF9812B /* Pods-BLImagePickerVCDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BLImagePickerVCDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = binglei.BLImagePickerVCDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLImagePickerVCDemo.app/BLImagePickerVCDemo";
+			};
+			name = Debug;
+		};
+		8DB07CBF1F2ECABF00EDA00E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECCCC3FA542B797A00310EC7 /* Pods-BLImagePickerVCDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BLImagePickerVCDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = binglei.BLImagePickerVCDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLImagePickerVCDemo.app/BLImagePickerVCDemo";
+			};
+			name = Release;
+		};
+		8DB07CC11F2ECABF00EDA00E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DA4494D2E398CD019DD24AB /* Pods-BLImagePickerVCDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BLImagePickerVCDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = binglei.BLImagePickerVCDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BLImagePickerVCDemo;
+			};
+			name = Debug;
+		};
+		8DB07CC21F2ECABF00EDA00E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B87A2C6AA225EDB07B65F1 /* Pods-BLImagePickerVCDemoUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BLImagePickerVCDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = binglei.BLImagePickerVCDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BLImagePickerVCDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8DB07C881F2ECABF00EDA00E /* Build configuration list for PBXProject "BLImagePickerVCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DB07CB81F2ECABF00EDA00E /* Debug */,
+				8DB07CB91F2ECABF00EDA00E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DB07CBA1F2ECABF00EDA00E /* Build configuration list for PBXNativeTarget "BLImagePickerVCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DB07CBB1F2ECABF00EDA00E /* Debug */,
+				8DB07CBC1F2ECABF00EDA00E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DB07CBD1F2ECABF00EDA00E /* Build configuration list for PBXNativeTarget "BLImagePickerVCDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DB07CBE1F2ECABF00EDA00E /* Debug */,
+				8DB07CBF1F2ECABF00EDA00E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DB07CC01F2ECABF00EDA00E /* Build configuration list for PBXNativeTarget "BLImagePickerVCDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DB07CC11F2ECABF00EDA00E /* Debug */,
+				8DB07CC21F2ECABF00EDA00E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8DB07C851F2ECABF00EDA00E /* Project object */;
+}
