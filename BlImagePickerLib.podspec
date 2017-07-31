@@ -92,7 +92,7 @@ s.source       = { :git => "https://github.com/IceTears1/BLImagePickerController
 s.source_files  = "BLImagePickerLib/**/*.{h,m}"
 #s.exclude_files = "Classes/Exclude"
 
-s.public_header_files = "BLImagePickerLib/*.h"
+#s.public_header_files = "BLImagePickerLib/*.h"
 
 
 # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -103,9 +103,9 @@ s.public_header_files = "BLImagePickerLib/*.h"
 #  non-essential files like tests, examples and documentation.
 #
 
-# s.resource  = "icon.png"
+s.resource  = "BlImagePickerLib/**/*.storyboard"
 
-s.resource_bundle = {'BLImagePickerLib' => [ 'BlImagePickerLib/**/*.{xcassets,storyboard}' ] }
+s.resource_bundle = {'BLImagePickerLib' => [ 'BlImagePickerLib/**/*.{xcassets}' ] }
 
 
 
