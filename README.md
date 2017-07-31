@@ -1,5 +1,10 @@
 # BLImagePickerController
 相片选择器 支持iphone/ipad 兼容横竖屏切换
+效果图
+ ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/D9C84B1326C0E9F8CEC31CBCC2474784.png)
+ ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/99FD7E1B5D08CC339397D8B0DF3B0F0A.png)
+ ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/109F3CE5F9F780A8AB6A37BBE4E1805F.png)
+ ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/2B5A8B83A58398B892CFB4A2FC14C9A8.png)
 1>使用方法
 BLImagePickerViewController *imgVc = [[BLImagePickerViewController alloc]init];
 UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:imgVc];
