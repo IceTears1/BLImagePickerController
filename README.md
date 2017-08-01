@@ -16,7 +16,7 @@ pod 'BLImagePickerLib', '~> 1.0.1’
 
 效果图
 <br>
-<img height="400" src="../images/list.png"/>
+<img height="400" src="/images/list.png"/>
 <br>
 <br>
 <br>
