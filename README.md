@@ -11,13 +11,19 @@ pod 'BLImagePickerLib', '~> 1.0.1’
 
 4、功能上可能还比较简单 如果有什么特殊需求 可以提给我 我会尽快完善
 
-博客地址：https://my.oschina.net/iceTear/blog
-        https://my.oschina.net/iceTear/blog/1498504
+[我的博客](https://my.oschina.net/iceTear/blog)  
+[BLImagePickerLib讲解](https://my.oschina.net/iceTear/blog/1498504)  
+
 效果图
- ![img](../images/list.png)
- ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/group.png)
- ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/109F3CE5F9F780A8AB6A37BBE4E1805F.png)
- ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/2B5A8B83A58398B892CFB4A2FC14C9A8.png)
+<br>
+<img height="400" src="/images/list.png"/>
+<br>
+<img height="400" src="/images/group.png"/>
+<br>
+<img height="400" src="/images/109F3CE5F9F780A8AB6A37BBE4E1805F.png"/>
+<br>
+<img height="400" src="/images/2B5A8B83A58398B892CFB4A2FC14C9A8.png"/>
+<br>
 1>使用方法
 
 BLImagePickerViewController *imgVc = [[BLImagePickerViewController alloc]init];
