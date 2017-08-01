@@ -92,7 +92,7 @@ s.source       = { :git => "https://github.com/IceTears1/BLImagePickerController
 s.source_files  = "BLImagePickerLib/**/*.{h,m}"
 #s.exclude_files = "Classes/Exclude"
 
-#s.public_header_files = "BLImagePickerLib/*.h"
+#s.public_header_files = "BLImagePickerLib/BLImagePickerViewController.h"
 
 
 # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
