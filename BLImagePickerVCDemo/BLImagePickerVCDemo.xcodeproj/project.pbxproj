@@ -259,11 +259,11 @@
 		8DB07CC31F2ECB2600EDA00E /* BlImagePickerLib */ = {
 			isa = PBXGroup;
 			children = (
+				8DB07CD81F2ECB2600EDA00E /* BLImagePickerViewController.h */,
+				8DB07CD91F2ECB2600EDA00E /* BLImagePickerViewController.m */,
 				8DB07CC41F2ECB2600EDA00E /* BlImageClipping */,
 				8DB07CC71F2ECB2600EDA00E /* BlImageConfig */,
 				8DB07CD01F2ECB2600EDA00E /* BlImageList */,
-				8DB07CD81F2ECB2600EDA00E /* BLImagePickerViewController.h */,
-				8DB07CD91F2ECB2600EDA00E /* BLImagePickerViewController.m */,
 				8DB07CDA1F2ECB2600EDA00E /* BlImagepreview */,
 				8DB07CE31F2ECB2600EDA00E /* BlPhotoAlbum */,
 				8DB07CE81F2ECB2600EDA00E /* BLTransitionAnimation */,

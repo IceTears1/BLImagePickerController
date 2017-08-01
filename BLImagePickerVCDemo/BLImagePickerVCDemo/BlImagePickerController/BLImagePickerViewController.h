@@ -61,7 +61,7 @@
 
 /*
  @navColor  导航栏的title
- @默认白色
+ @默认相册的名字
  */
 @property (nonatomic,strong)NSString *navTitle;
 
