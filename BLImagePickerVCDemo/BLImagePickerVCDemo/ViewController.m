@@ -24,7 +24,7 @@
     [super viewDidLoad];
     //    self.view.backgroundColor = [UIColor redColor];
     
-    [self.dataSource addObjectsFromArray:@[@"选择 单张图片 不剪裁",@"选择 单张图片+相机 不剪裁",@"选择 单张图片 剪裁",@"选择 单张图片+相机 剪裁",@"选择10张图片不带相机",@"选择10张图片带相机"]];
+    [self.dataSource addObjectsFromArray:@[@"选择 单张图片 不剪裁",@"选择 单张图片+相机 不剪裁",@"选择 单张图片 剪裁",@"选择 单张图片+相机 剪裁",@"选择5张图片不带相机",@"选择5张图片带相机"]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
