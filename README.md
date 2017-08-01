@@ -16,7 +16,10 @@ pod 'BLImagePickerLib', '~> 1.0.1’
 
 效果图
 <br>
-<img height="400" src="https://github.com/IceTears1/BLImagePickerController/blob/master/images/list.png" />
+<img height="400" src="/BLImagePickerController/blob/master/images/list.png" />
+<br>
+<br>
+<br>
 <br>
 <br>
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/list.png)
