@@ -14,9 +14,12 @@ pod 'BLImagePickerLib', '~> 1.0.1’
 [我的博客](https://my.oschina.net/iceTear/blog)  
 [BLImagePickerLib讲解](https://my.oschina.net/iceTear/blog/1498504)  
 
-
 效果图
- ![img](https://../images/list.png)
+<br>
+<img height="400" src="https://github.com/IceTears1/BLImagePickerController/blob/master/images/list.png" />
+<br>
+<br>
+ ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/list.png)
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/group.png)
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/109F3CE5F9F780A8AB6A37BBE4E1805F.png)
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/2B5A8B83A58398B892CFB4A2FC14C9A8.png)
