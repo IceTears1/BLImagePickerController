@@ -11,7 +11,8 @@ pod 'BLImagePickerLib', '~> 1.0.1’
 
 4、功能上可能还比较简单 如果有什么特殊需求 可以提给我 我会尽快完善
 
-
+博客地址：https://my.oschina.net/iceTear/blog
+        https://my.oschina.net/iceTear/blog/1498504
 效果图
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/list.png)
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/group.png)
