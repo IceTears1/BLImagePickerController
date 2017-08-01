@@ -1,5 +1,17 @@
 # BLImagePickerController
-相片选择器 支持iphone/ipad 兼容横竖屏切换
+使用方式
+pod 'BLImagePickerLib', '~> 1.0.1’
+
+相片选择器 
+1、支持iphone/ipad 
+
+2、兼容横竖屏切换
+
+3、支持系统版本 ios8.0 以上
+
+4、功能上可能还比较简单 如果有什么特殊需求 可以提给我 我会尽快完善
+
+
 效果图
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/list.png)
  ![img](https://github.com/IceTears1/BLImagePickerController/blob/master/images/group.png)
