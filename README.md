@@ -2,7 +2,8 @@
 使用方式
 pod 'BLImagePickerLib', '~> 1.0.1’
 
-相片选择器 
+相片选择器
+
 1、支持iphone/ipad 
 
 2、兼容横竖屏切换

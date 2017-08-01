@@ -11,6 +11,7 @@
 #import "BLPickerConfig.h"
 
 
+
 @interface BLImagePickerViewController : BLPickerBaseViewController
 
 -(void)initDataProgress:(BLSelectImageLoading)progressBlock finished:(BLSelectImageFinishedBlock)finishedBlock cancle:(BLCancle)cancleBlock;

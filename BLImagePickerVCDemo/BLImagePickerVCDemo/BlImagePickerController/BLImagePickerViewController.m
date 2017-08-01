@@ -224,6 +224,7 @@
     }
     
 }
+
 #pragma mark 打开相机
 - (void)openCamera
 {
@@ -478,9 +479,7 @@
             _finishedBlock(selectAry,assetArry,image);
         }
     }
-
     [[BLImageHelper shareImageHelper] removeAllData];
-    
     if (self.presentingViewController) {
         [self dismissViewControllerAnimated:NO completion:nil];
     } else {
