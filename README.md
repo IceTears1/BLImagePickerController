@@ -1,5 +1,16 @@
 # BLImagePickerController
 使用方式
+
+在plist添加
+
+相机权限: Privacy - Camera Usage Description    是否允许此App使用你的相机？
+
+相册权限: Privacy - Photo Library Usage Description    是否允许此App访问你的媒体资料库？
+
+
+允许应用程序获取框架库内语言 :  Localized resources can be mixed        YES
+
+
 pod 'BLImagePickerLib', '~> 1.0.1’
 
 相片选择器
