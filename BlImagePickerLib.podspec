@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "BLImagePickerLib"
-s.version      = "1.0.1"
+s.version      = "1.0.2"
 s.summary      = "图片选择器"
 
 # This description is used to generate tags and improve search results.
