@@ -46,4 +46,9 @@
 @property (nonatomic,assign)BOOL isAllphoto;//是相机胶卷相册
 
 @property (nonatomic,copy)NSString *currentGroupTitle;//当前相册名字
+
+//预览图片放大缩小的倍数
+@property (nonatomic,assign)CGFloat maxScale;
+@property (nonatomic,assign)CGFloat minScale;
+
 @end

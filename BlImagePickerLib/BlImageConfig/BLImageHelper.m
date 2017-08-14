@@ -189,6 +189,8 @@
     self.lastSelectIndex = nil;
     self.showCamera = NO;
     self.currentGroupTitle = @"";
+    self.minScale = 1.0;
+    self.maxScale = 2.0;
 }
 
 @end

@@ -13,7 +13,7 @@
 #import "BLPreviewImageHeaderView.h"
 #import "BLPickerConfig.h"
 
-@interface BLPreviewImageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, BLPreviewImageHeaderViewDelegate, UIScrollViewDelegate, BLPreviewImageFooterViewDelegate>
+@interface BLPreviewImageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, BLPreviewImageHeaderViewDelegate, UIScrollViewDelegate, BLPreviewImageFooterViewDelegate,BLPreviewImageCollectionViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -118,6 +118,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BLPreviewImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BLPreviewImageCell" forIndexPath:indexPath];
     cell.scrollView.zoomScale = 1;
+    cell.delegate = self;
     //    [cell.scrollView  setContentOffset:CGPointMake(0, 0)];
     if (self.previewType == BL_PreviewAll) {
         [cell initDataSource:[BLImageHelper shareImageHelper].phassetArr inedexPath:indexPath isOriginalImage:self.isOriginal];
@@ -142,9 +143,8 @@
     return 0.001;
 }
 
-
 #pragma mark  手势事件
-- (IBAction)tapAction:(id)sender {
+-(void)Bl_previewImageCollectionViewCellSingleRecognizer{
     __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:0.6 animations:^{
         weakSelf.topView.alpha = weakSelf.footerView.alpha = weakSelf.footerView.hidden;
@@ -156,6 +156,7 @@
             weakSelf.footerViewHight.constant = 45;
         }
     }];
+
 }
 
 #pragma mark    头部view 返回按钮和 选择 按钮代理

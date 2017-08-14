@@ -15,10 +15,11 @@
 @interface BLImagePickerViewController : BLPickerBaseViewController
 
 -(void)initDataProgress:(BLSelectImageLoading)progressBlock finished:(BLSelectImageFinishedBlock)finishedBlock cancle:(BLCancle)cancleBlock;
-@property (nonatomic,copy)BLSelectImageFinishedBlock finishedBlock;//照片选择完成
 
+@property (nonatomic,copy)BLSelectImageFinishedBlock finishedBlock;//照片选择完成
 @property (nonatomic,copy)BLSelectImageLoading progressBlock;//照片选择完成
 @property (nonatomic,copy)BLCancle cancleBlock;//取消
+
 /*
  @itemSize  拿到的图片的大小
  @默认 原图（比较大慎用）
@@ -72,6 +73,18 @@
 @property (nonatomic,assign)BOOL showCamera;
 
 /*
+ @ 图片预览放大倍数
+ 默认2.0
+ */
+@property (nonatomic,assign)CGFloat maxScale;
+
+/*
+ @ 图片预览缩小倍数
+ 默认1.0
+ */
+@property (nonatomic,assign)CGFloat minScale;
+
+/*
  @无法获取照相机权限时候的提示语
  @默认
  无法获取相机功能请在iphone/ipad的“设置-隐私-相机”选项中允许 “app名字” 访问您的相机"
@@ -83,5 +96,6 @@
  无法获取相册功能请在“iphone/ipad“的设置-隐私-相册”选项中允许 ”app名字“ 访问您的相册"
  */
 @property (nonatomic,strong)NSString *photoAlbumMassage;
+
 
 @end

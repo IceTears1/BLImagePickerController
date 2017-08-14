@@ -165,44 +165,6 @@
     self.backBtn.hidden = NO;
 }
 
-/**
- push 页面跳转方法处理
- 
- @param item 入参:controller名称
- */
-//-(void)pushViewController:(id)item{
-//    if(isNull_ALS(item))return;
-//    if ([item isKindOfClass:[UIViewController class]]) {//如果是对象的话直接push过去
-//        [self.navigationController pushViewController:item animated:YES];
-//    }else{//是类名的话，使用这种
-//        [self pushViewController:item hiddenBottomBar:NO];
-//    }
-//}
-
-
-/**
- vc回退处理
- */
-//-(void)popViewController{
-//    [self.navigationController popViewControllerAnimated:YES];
-//}
-
-/**
- vc回退到指定的视图控制器处理
- */
-//-(void)popToViewController:(NSString *)className{
-//    NSArray *vcArray = self.navigationController.childViewControllers;
-//    for (UIViewController *vc in vcArray) {
-//        if ([[NSString stringWithUTF8String:class_getName([vc class])] isEqualToString:className]) {
-//            [self.navigationController popToViewController:vc animated:YES];
-//            break;
-//        }
-//    }
-//}
-
-
-
-
 -(void)dealloc
 {
     //    NSLog(@"\r[销毁控制器:%@(%@)]", NSStringFromClass([self class]),self.title);

@@ -11,13 +11,15 @@
 #import "BLPickerConfig.h"
 
 
+
 @interface BLImagePickerViewController : BLPickerBaseViewController
 
 -(void)initDataProgress:(BLSelectImageLoading)progressBlock finished:(BLSelectImageFinishedBlock)finishedBlock cancle:(BLCancle)cancleBlock;
-@property (nonatomic,copy)BLSelectImageFinishedBlock finishedBlock;//照片选择完成
 
+@property (nonatomic,copy)BLSelectImageFinishedBlock finishedBlock;//照片选择完成
 @property (nonatomic,copy)BLSelectImageLoading progressBlock;//照片选择完成
 @property (nonatomic,copy)BLCancle cancleBlock;//取消
+
 /*
  @itemSize  拿到的图片的大小
  @默认 原图（比较大慎用）
@@ -61,7 +63,7 @@
 
 /*
  @navColor  导航栏的title
- @默认白色
+ @默认相册的名字
  */
 @property (nonatomic,strong)NSString *navTitle;
 
@@ -69,6 +71,18 @@
  @ 显示相机
  */
 @property (nonatomic,assign)BOOL showCamera;
+
+/*
+ @ 图片预览放大倍数
+ 默认2.0
+ */
+@property (nonatomic,assign)CGFloat maxScale;
+
+/*
+ @ 图片预览缩小倍数
+ 默认1.0
+ */
+@property (nonatomic,assign)CGFloat minScale;
 
 /*
  @无法获取照相机权限时候的提示语
@@ -82,5 +96,6 @@
  无法获取相册功能请在“iphone/ipad“的设置-隐私-相册”选项中允许 ”app名字“ 访问您的相册"
  */
 @property (nonatomic,strong)NSString *photoAlbumMassage;
+
 
 @end

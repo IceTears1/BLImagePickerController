@@ -94,7 +94,7 @@
 		8DB07CCD1F2ECB2600EDA00E /* BLPickerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLPickerConfig.h; sourceTree = "<group>"; };
 		8DB07CCE1F2ECB2600EDA00E /* PHAsset+AddFlag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+AddFlag.h"; sourceTree = "<group>"; };
 		8DB07CCF1F2ECB2600EDA00E /* PHAsset+AddFlag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+AddFlag.m"; sourceTree = "<group>"; };
-		8DB07CD11F2ECB2600EDA00E /* BLImagePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BLImagePicker.storyboard; sourceTree = "<group>"; };
+		8DB07CD11F2ECB2600EDA00E /* BLImagePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BLImagePicker.storyboard; path = ../BlImageList/BLImagePicker.storyboard; sourceTree = "<group>"; };
 		8DB07CD21F2ECB2600EDA00E /* BLListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLListCollectionViewCell.h; sourceTree = "<group>"; };
 		8DB07CD31F2ECB2600EDA00E /* BLListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLListCollectionViewCell.m; sourceTree = "<group>"; };
 		8DB07CD41F2ECB2600EDA00E /* BLListFooterReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLListFooterReusableView.h; sourceTree = "<group>"; };
@@ -285,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB07CC81F2ECB2600EDA00E /* Assets.xcassets */,
+				8DB07CD11F2ECB2600EDA00E /* BLImagePicker.storyboard */,
 				8DB07CC91F2ECB2600EDA00E /* BLImageHelper.h */,
 				8DB07CCA1F2ECB2600EDA00E /* BLImageHelper.m */,
 				8DB07CCB1F2ECB2600EDA00E /* BLPickerBaseViewController.h */,
@@ -299,7 +300,6 @@
 		8DB07CD01F2ECB2600EDA00E /* BlImageList */ = {
 			isa = PBXGroup;
 			children = (
-				8DB07CD11F2ECB2600EDA00E /* BLImagePicker.storyboard */,
 				8DB07CD21F2ECB2600EDA00E /* BLListCollectionViewCell.h */,
 				8DB07CD31F2ECB2600EDA00E /* BLListCollectionViewCell.m */,
 				8DB07CD41F2ECB2600EDA00E /* BLListFooterReusableView.h */,

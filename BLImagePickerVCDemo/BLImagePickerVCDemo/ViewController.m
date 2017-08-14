@@ -94,6 +94,7 @@
             imgVc.imageClipping = YES;
             imgVc.showCamera = YES;
             imgVc.maxNum = 5;
+            imgVc.maxScale = 2.0;
             
         }
             break;

@@ -12,7 +12,9 @@
 
 @interface BLPreviewImageCell()<UIScrollViewDelegate>
 
-
+{
+    CGFloat curScale;
+}
 
 @end
 
@@ -21,8 +23,56 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.scrollView.delegate = self;
+    self.scrollView.zoomScale = 1.0;
+    self.scrollView.maximumZoomScale = [BLImageHelper shareImageHelper].maxScale;
+    self.scrollView.minimumZoomScale = [BLImageHelper shareImageHelper].minScale;
+    self.scrollView.bouncesZoom = YES;
+
+    curScale = 1.0;
+    
+    UITapGestureRecognizer *singleRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTap1:)];
+    //点击的次数
+    singleRecognizer.numberOfTapsRequired = 1; // 单击
+    [self addGestureRecognizer:singleRecognizer];
+    
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer* doubleRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTap:)];
+    doubleRecognizer.numberOfTapsRequired = 2;
+    [self addGestureRecognizer:doubleRecognizer];
+    [singleRecognizer requireGestureRecognizerToFail:doubleRecognizer];  
+    
+}
+-(void)singleTap1:(UITapGestureRecognizer*)recognizer
+{
+    
+    if(self.delegate){
+        [self.delegate Bl_previewImageCollectionViewCellSingleRecognizer];
+    }
+
+}
+-(void)doubleTap:(UITapGestureRecognizer*)recognizer
+{
+    
+    if(curScale == 1.0) {
+        [self.scrollView setZoomScale:[BLImageHelper shareImageHelper].maxScale animated:YES];
+    }else{
+        [self.scrollView setZoomScale:[BLImageHelper shareImageHelper].minScale animated:YES];
+    }
 }
 
+// 缩放时调用
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView{
+    curScale = scrollView.zoomScale;
+    // 可以实时监测缩放比例
+    if(scrollView.zoomScale<=1.0){
+        self.fullImage.center = scrollView.center;
+    }
+}
+
+#pragma mark    UIScrollViewDelegate
+- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView; {
+    return self.fullImage;
+}
 
 - (void)initDataSource:(NSMutableArray *)dataSource inedexPath:(NSIndexPath *)indexPath isOriginalImage:(BOOL)isOriginal{
     if (dataSource.count > indexPath.row) {
@@ -30,6 +80,8 @@
         [self initCellWtihPHAsseet:asset isOriginalImage:isOriginal];
     }
 }
+
+
 /**
  
  asset，图像对应的 PHAsset。
@@ -79,21 +131,6 @@
 
 }
 
-
-
-
-
-
-#pragma mark    UIScrollViewDelegate
-- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView; {
-    return self.fullImage;
-}
-
-#pragma mark    Case
-//- (void)setScrollView:(UIScrollView *)scrollView {
-//    _scrollView = scrollView;
-//    _scrollView.delegate = self;
-//}
 
 
 

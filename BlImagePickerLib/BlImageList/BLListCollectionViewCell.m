@@ -24,6 +24,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self bringSubviewToFront:self.chooseState];
+    self.bgImage.userInteractionEnabled = YES;
 }
 
 - (void)initCellWithDataSource:(NSMutableArray *)dataSource withIndexPath:(NSIndexPath *)indexPath isCancleAction:(BOOL)cancleAction {

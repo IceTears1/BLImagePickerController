@@ -130,12 +130,16 @@
         self.fooerViewHight.constant = 45;
         self.fooerView.hidden = NO;
     }
-    
+    if (self.maxScale == 0) {
+        self.maxScale = 2.0;
+    }
+    if (self.minScale == 0) {
+        self.minScale = 1.0;
+    }
     [BLImageHelper shareImageHelper].maxNum = self.maxNum;
     [BLImageHelper shareImageHelper].showCamera = self.showCamera;
-    
-    
-    
+    [BLImageHelper shareImageHelper].minScale = self.minScale;
+    [BLImageHelper shareImageHelper].maxScale = self.maxScale;
     
 }
 

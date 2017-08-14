@@ -43,7 +43,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="151" height="145"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-GX-P20">
-                                                    <rect key="frame" x="116" y="5" width="30" height="30"/>
+                                                    <rect key="frame" x="121" y="0.0" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="eck-j5-lnf"/>
                                                         <constraint firstAttribute="width" constant="30" id="vS5-wa-cMs"/>
@@ -57,9 +57,9 @@
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="ciH-eK-6by" secondAttribute="bottom" id="TZX-SR-tFd"/>
-                                            <constraint firstAttribute="trailing" secondItem="lVf-GX-P20" secondAttribute="trailing" constant="5" id="UXc-Ql-bwa"/>
+                                            <constraint firstAttribute="trailing" secondItem="lVf-GX-P20" secondAttribute="trailing" id="UXc-Ql-bwa"/>
                                             <constraint firstItem="ciH-eK-6by" firstAttribute="leading" secondItem="zQb-5W-3HZ" secondAttribute="leading" id="fZ0-Ug-lsK"/>
-                                            <constraint firstItem="lVf-GX-P20" firstAttribute="top" secondItem="zQb-5W-3HZ" secondAttribute="top" constant="5" id="hK6-ox-Uh2"/>
+                                            <constraint firstItem="lVf-GX-P20" firstAttribute="top" secondItem="zQb-5W-3HZ" secondAttribute="top" id="hK6-ox-Uh2"/>
                                             <constraint firstAttribute="trailing" secondItem="ciH-eK-6by" secondAttribute="trailing" id="tqV-bC-Af3"/>
                                             <constraint firstItem="ciH-eK-6by" firstAttribute="top" secondItem="zQb-5W-3HZ" secondAttribute="top" id="vSd-3g-Wle"/>
                                         </constraints>
@@ -320,14 +320,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="373" height="548"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="1.20000004768372" translatesAutoresizingMaskIntoConstraints="NO" id="nuY-Nd-Pin">
-                                                    <rect key="frame" x="2" y="2" width="369" height="544"/>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="1.20000004768372" translatesAutoresizingMaskIntoConstraints="NO" id="nuY-Nd-Pin">
+                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="548"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vXI-SV-AXR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="369" height="544"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="373" height="548"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q57-Xv-Wda">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="369" height="544"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="548"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -351,10 +351,10 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="nuY-Nd-Pin" firstAttribute="leading" secondItem="S5U-62-uJ9" secondAttribute="leading" constant="2" id="0xX-eI-876"/>
-                                            <constraint firstAttribute="trailing" secondItem="nuY-Nd-Pin" secondAttribute="trailing" constant="2" id="6Xi-oZ-4Ka"/>
-                                            <constraint firstItem="nuY-Nd-Pin" firstAttribute="top" secondItem="S5U-62-uJ9" secondAttribute="top" constant="2" id="i0O-HE-ZAv"/>
-                                            <constraint firstAttribute="bottom" secondItem="nuY-Nd-Pin" secondAttribute="bottom" constant="2" id="kcV-yY-ofn"/>
+                                            <constraint firstItem="nuY-Nd-Pin" firstAttribute="leading" secondItem="S5U-62-uJ9" secondAttribute="leading" id="0xX-eI-876"/>
+                                            <constraint firstAttribute="trailing" secondItem="nuY-Nd-Pin" secondAttribute="trailing" id="6Xi-oZ-4Ka"/>
+                                            <constraint firstItem="nuY-Nd-Pin" firstAttribute="top" secondItem="S5U-62-uJ9" secondAttribute="top" id="i0O-HE-ZAv"/>
+                                            <constraint firstAttribute="bottom" secondItem="nuY-Nd-Pin" secondAttribute="bottom" id="kcV-yY-ofn"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="fullImage" destination="q57-Xv-Wda" id="GwM-ll-HDZ"/>
@@ -500,9 +500,6 @@
                             <constraint firstItem="NKF-9a-baI" firstAttribute="leading" secondItem="ctm-9v-mtM" secondAttribute="leading" id="tYu-ob-nX0"/>
                             <constraint firstItem="NKF-9a-baI" firstAttribute="top" secondItem="ctm-9v-mtM" secondAttribute="top" id="yng-zr-zeN"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="32b-D1-TQS" appends="YES" id="ruM-BF-bLf"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="NKF-9a-baI" id="xbk-Kr-qBD"/>
@@ -512,11 +509,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogq-wt-iq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="32b-D1-TQS">
-                    <connections>
-                        <action selector="tapAction:" destination="bYB-1P-ziF" id="qLY-7F-tbS"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1663" y="-43"/>
         </scene>

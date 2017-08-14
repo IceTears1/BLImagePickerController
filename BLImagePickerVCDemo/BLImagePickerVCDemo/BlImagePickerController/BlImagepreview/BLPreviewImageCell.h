@@ -11,8 +11,7 @@
 
 @protocol BLPreviewImageCollectionViewCellDelegate  <NSObject>
 
-- (void)Bl_previewImageCollectionViewCellTaped;
-
+- (void)Bl_previewImageCollectionViewCellSingleRecognizer;//单击操作
 @end
 
 
@@ -20,5 +19,7 @@
 @property (nonatomic, weak) id<BLPreviewImageCollectionViewCellDelegate>delegate;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *fullImage;
+
+
 - (void)initDataSource:(NSMutableArray *)dataSource  inedexPath:(NSIndexPath *)indexPath isOriginalImage:(BOOL)isOriginal;
 @end
