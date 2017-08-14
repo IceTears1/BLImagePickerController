@@ -41,3 +41,7 @@ pod 'BLImagePickerLib', '~> 1.0.1’
 [BLImagePickerLib讲解](https://my.oschina.net/iceTear/blog/1498504)  
 
 [我的博客](https://my.oschina.net/iceTear/blog)  
+
+版本记录
+1.0.1 修改相机引起的bug
+1.0.2 修复预览界面问题
