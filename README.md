@@ -11,7 +11,7 @@
 允许应用程序获取框架库内语言 :  Localized resources can be mixed        YES
 
 
-pod 'BLImagePickerLib', '~> 1.0.1’
+pod 'BLImagePickerLib'
 
 相片选择器
 
@@ -19,7 +19,7 @@ pod 'BLImagePickerLib', '~> 1.0.1’
 
 2、兼容横竖屏切换
 
-3、支持系统版本 ios8.0 以上
+3、支持系统版本 iOS8.0 以上
 
 4、功能上可能还比较简单 如果有什么特殊需求 可以提给我 我会尽快完善
 
