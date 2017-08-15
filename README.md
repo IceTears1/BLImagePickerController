@@ -42,6 +42,12 @@ pod 'BLImagePickerLib'
 
 [我的博客](https://my.oschina.net/iceTear/blog)  
 
-版本记录
+【版本记录】
+
 1.0.1 修改相机引起的bug
+
 1.0.2 修复预览界面问题  添加双击手势  优化界面  
+
+1.0.3 新增剪裁页面放大倍数 修复 双击手势在minScale<0 时候出现的问题
+
+
