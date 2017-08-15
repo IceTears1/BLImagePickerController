@@ -95,6 +95,7 @@
             imgVc.showCamera = YES;
             imgVc.maxNum = 5;
             imgVc.maxScale = 2.0;
+            imgVc.minScale = 0.5; 
             
         }
             break;

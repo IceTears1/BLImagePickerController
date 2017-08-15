@@ -56,7 +56,7 @@
     if(curScale == 1.0) {
         [self.scrollView setZoomScale:[BLImageHelper shareImageHelper].maxScale animated:YES];
     }else{
-        [self.scrollView setZoomScale:[BLImageHelper shareImageHelper].minScale animated:YES];
+        [self.scrollView setZoomScale:1.0 animated:YES];
     }
 }
 
@@ -105,6 +105,7 @@
 
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
     options.synchronous = YES;
+    options.networkAccessAllowed = YES;//允许从icloud 下载
     options.resizeMode = PHImageRequestOptionsResizeModeFast;
     //  后台执行：
 //    dispatch_async(dispatch_get_global_queue(0, 0), ^{

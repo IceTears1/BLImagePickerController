@@ -285,7 +285,7 @@
 }
 -(void)saveImage:(UIImage *)image{
     if (self.imageClipping&&self.maxNum == 1) {
-        BLImageClipingViewController *vc = [[BLImageClipingViewController alloc]initWithImage:image cropFrame:self.clippingItemSize limitScaleRatio:2];
+        BLImageClipingViewController *vc = [[BLImageClipingViewController alloc]initWithImage:image cropFrame:self.clippingItemSize limitScaleRatio:(self.imageClippingScale == 0)?2.0:self.imageClippingScale];
         vc.delegate = self;
         [self.navigationController BL_pushViewController:vc AnimatorStyle:BLTransitionAnimatorBottom animated:NO];
     }else{
@@ -399,15 +399,17 @@
 #pragma mark   跳转切图页面
 -(void)jumpClippingVc:(PHAsset*) asset{
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
-    options.synchronous = NO;
-    options.resizeMode = PHImageRequestOptionsResizeModeFast;
+    options.synchronous = YES;
+    options.deliveryMode = PHImageRequestOptionsDeliveryModeFastFormat;
+    options.resizeMode = PHImageRequestOptionsDeliveryModeFastFormat;
+    options.networkAccessAllowed = YES;//允许从icloud 下载
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:PHImageManagerMaximumSize contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             
             // 主线程执行：
             dispatch_async(dispatch_get_main_queue(), ^{
-                BLImageClipingViewController *vc = [[BLImageClipingViewController alloc]initWithImage:result cropFrame:weakSelf.clippingItemSize limitScaleRatio:2];
+                BLImageClipingViewController *vc = [[BLImageClipingViewController alloc]initWithImage:result cropFrame:weakSelf.clippingItemSize limitScaleRatio:(self.imageClippingScale == 0)?2.0:self.imageClippingScale];
                 vc.delegate = weakSelf;
                 [weakSelf.navigationController BL_pushViewController:vc AnimatorStyle:BLTransitionAnimatorBottom animated:YES];
             });
@@ -418,6 +420,7 @@
     
     
 }
+
 #pragma mark    发送图片
 -(void)sendData{
     if ([[BLImageHelper shareImageHelper].phassetChoosedArr count]== 0) {

@@ -38,6 +38,13 @@
 @property (nonatomic,assign)BOOL imageClipping;
 
 /*
+ @imageClippingScale  图片剪裁页面图片可放大的倍数
+ @默认 2.0
+ 只有图片剪裁页面生效
+ */
+@property (nonatomic,assign)CGFloat imageClippingScale;
+
+/*
  @clippingItemSize  图片剪裁大小
  @注意
  1>使用相册获取单张图片时候使用
