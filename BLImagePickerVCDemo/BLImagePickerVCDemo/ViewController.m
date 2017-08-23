@@ -118,6 +118,7 @@
             imgVc.maxScale = 2.0;
             imgVc.minScale = 0.5;
             imgVc.showOrignal = YES;
+            [imgVc disPlayCurVerson];
         }
             break;
             

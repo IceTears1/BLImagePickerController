@@ -538,6 +538,12 @@
     _fooerView = fooerView;
     _fooerView.delegate = self;
 }
+
+-(void)disPlayCurVerson{
+    DDLOG(@"-----------------------------------------BLImagePickerLib----------------------------------------");
+    DDLOG(@"-----------------------------------------------V%@--------------------------------------------",curVerson);
+    DDLOG(@"-------------------git:%@----------------------",@"https://github.com/IceTears1/BLImagePickerController");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

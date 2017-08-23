@@ -24,6 +24,7 @@
 @property (nonatomic,copy)BLSelectImageLoading progressBlock;//照片选择完成
 @property (nonatomic,copy)BLCancle cancleBlock;//取消
 
+
 /*
  @itemSize  拿到的图片的大小
  @默认 原图（比较大慎用）
@@ -122,4 +123,6 @@
 @property (nonatomic,strong)NSString *photoAlbumMassage;
 
 
+
+- (void)disPlayCurVerson;
 @end

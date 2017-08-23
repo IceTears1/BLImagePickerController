@@ -8,6 +8,7 @@
 
 #ifndef BLPickerConfig_h
 #define BLPickerConfig_h
+#define curVerson @"1.0.4"
 
 #define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height
