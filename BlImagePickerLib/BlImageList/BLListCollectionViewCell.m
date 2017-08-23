@@ -73,6 +73,7 @@
     
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
     options.synchronous = YES;
+    options.networkAccessAllowed = YES;//允许从icloud 下载
     /*
      1.Opportunistic表示尽可能的获取高质量图片
      2.HighQualityFormat表示不管花多少时间也要获取高质量的图片(慎用)

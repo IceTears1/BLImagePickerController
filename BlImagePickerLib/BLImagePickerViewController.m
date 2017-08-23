@@ -20,6 +20,7 @@
     UIButton *leftBtn;
     UILabel *tipsLabel;
     BOOL isCancel;
+    
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet BLPhotoListFooterView *fooerView;
@@ -28,7 +29,7 @@
 @property (nonatomic, assign) BOOL cancelAllSelect;
 @property (nonatomic, copy) PHFetchResult *result;
 @property (nonatomic, strong) dispatch_source_t timer;
-
+@property (nonatomic, assign) BOOL isOriginal;
 @end
 
 @implementation BLImagePickerViewController
@@ -36,7 +37,9 @@
 {
     self = [super init];
     if (self) {
+        
         return  [[UIStoryboard storyboardWithName:@"BLImagePicker" bundle:nil] instantiateViewControllerWithIdentifier:@"BLImagePickerViewController"];
+        
     }
     return self;
 }
@@ -83,7 +86,7 @@
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             [self checkPhotoAbluPermissions];
         });
-
+        
     }else if(i==0){
         [[BLImageHelper shareImageHelper] removeAllData];
         self.collectionView.hidden = YES;
@@ -96,7 +99,7 @@
         tipsLabel.numberOfLines = 0;
         [self.view addSubview:tipsLabel];
     }else{
-
+        
         self.collectionView.hidden = NO;
         [[BLImageHelper shareImageHelper].phassetChoosedArr removeAllObjects];
         [[BLImageHelper shareImageHelper] getAllImageActionWithCollection:nil];
@@ -106,7 +109,7 @@
     
 }
 -(void)initBaseData{
-   
+    
     [BLImageHelper shareImageHelper].currentGroupTitle = @"相机胶卷";
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     // app名称
@@ -118,7 +121,7 @@
         self.photoAlbumMassage = [NSString stringWithFormat:@"无法获取相册功能请在%@的“设置-隐私-照片”选项中允许%@访问您的手机相册", self.isiPhone?@"iphone":@"ipad",app_Name];
     }
     
-     [self checkPhotoAbluPermissions];
+    [self checkPhotoAbluPermissions];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
     if (self.maxNum<=0) {
         self.maxNum = 10;
@@ -140,9 +143,13 @@
     [BLImageHelper shareImageHelper].showCamera = self.showCamera;
     [BLImageHelper shareImageHelper].minScale = self.minScale;
     [BLImageHelper shareImageHelper].maxScale = self.maxScale;
-    
 }
-
+-(void)setShowOrignal:(BOOL)showOrignal{
+    [BLImageHelper shareImageHelper].showOrignal = showOrignal;
+}
+-(void)setShowOrignalBtn:(BOOL)showOrignalBtn{
+    [BLImageHelper shareImageHelper].showOrignalBtn = showOrignalBtn;
+}
 #pragma mark    UICollectionViewDelegate, UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (self.showCamera&&[BLImageHelper shareImageHelper].isAllphoto) {
@@ -221,6 +228,7 @@
             }else{
                 fullC.previewIndex = indexPath.item;
             }
+            fullC.isOriginal = self.isOriginal;
             fullC.delegate = self;
             [self presentViewController:fullC animated:YES completion:nil];
         }
@@ -278,14 +286,14 @@
         [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         }]];
         [self presentViewController:alert animated:YES completion:nil];
-
+        
     }else{
         [self saveImage:image];
     }
 }
 -(void)saveImage:(UIImage *)image{
     if (self.imageClipping&&self.maxNum == 1) {
-        BLImageClipingViewController *vc = [[BLImageClipingViewController alloc]initWithImage:image cropFrame:self.clippingItemSize limitScaleRatio:2];
+        BLImageClipingViewController *vc = [[BLImageClipingViewController alloc]initWithImage:image cropFrame:self.clippingItemSize limitScaleRatio:(self.imageClippingScale == 0)?2.0:self.imageClippingScale];
         vc.delegate = self;
         [self.navigationController BL_pushViewController:vc AnimatorStyle:BLTransitionAnimatorBottom animated:NO];
     }else{
@@ -306,7 +314,7 @@
                 [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 }]];
                 [self presentViewController:alert animated:YES completion:nil];
-
+                
             }
             [UIView performWithoutAnimation:^{
                 [self.collectionView reloadData];
@@ -344,6 +352,9 @@
         }
     }
 }
+-(void)BL_photoListFooterViewShowOriginal:(BOOL)isOriginal{
+    self.isOriginal = isOriginal;
+}
 //cell的代理  刷新已选图片的个数
 - (void)BL_imageHelperGetImageCount:(NSInteger)count {
     [self.fooerView initFooterWithCount:count];
@@ -368,7 +379,6 @@
     }else{
         self.title = [BLImageHelper shareImageHelper].currentGroupTitle;
     }
-    //    DDLOG(@"%@",[BLImageHelper shareImageHelper].currentGroupTitle);
 }
 
 #pragma mark    预览
@@ -399,15 +409,17 @@
 #pragma mark   跳转切图页面
 -(void)jumpClippingVc:(PHAsset*) asset{
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
-    options.synchronous = NO;
-    options.resizeMode = PHImageRequestOptionsResizeModeFast;
+    options.synchronous = YES;
+    options.deliveryMode = PHImageRequestOptionsDeliveryModeFastFormat;
+    options.resizeMode = PHImageRequestOptionsDeliveryModeFastFormat;
+    options.networkAccessAllowed = YES;//允许从icloud 下载
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:PHImageManagerMaximumSize contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             
             // 主线程执行：
             dispatch_async(dispatch_get_main_queue(), ^{
-                BLImageClipingViewController *vc = [[BLImageClipingViewController alloc]initWithImage:result cropFrame:weakSelf.clippingItemSize limitScaleRatio:2];
+                BLImageClipingViewController *vc = [[BLImageClipingViewController alloc]initWithImage:result cropFrame:weakSelf.clippingItemSize limitScaleRatio:(self.imageClippingScale == 0)?2.0:self.imageClippingScale];
                 vc.delegate = weakSelf;
                 [weakSelf.navigationController BL_pushViewController:vc AnimatorStyle:BLTransitionAnimatorBottom animated:NO];
             });
@@ -418,6 +430,7 @@
     
     
 }
+
 #pragma mark    发送图片
 -(void)sendData{
     if ([[BLImageHelper shareImageHelper].phassetChoosedArr count]== 0) {
@@ -435,14 +448,11 @@
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
     options.synchronous = YES;
     options.resizeMode = PHImageRequestOptionsResizeModeFast;
-    
+    options.networkAccessAllowed = YES;//允许从icloud 下载
     NSMutableArray *mAry = [[NSMutableArray alloc]initWithCapacity:0];
-    
-    
     if (self.progressBlock) {
         self.progressBlock(0);
     }
-    
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSInteger i=1;
         for (PHAsset *asset in [BLImageHelper shareImageHelper].phassetChoosedArr) {
@@ -496,7 +506,6 @@
     }else{
         self.title =[BLImageHelper shareImageHelper].currentGroupTitle;
     }
-    
     if(self.navColor){
         self.navigationController.navigationBar.barTintColor=self.navColor;
     }else{
@@ -510,10 +519,9 @@
         [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor whiteColor]}];
         self.navigationController.navigationBar.tintColor= [UIColor whiteColor];
     }
-    
 }
 - (void)createNav1{
-
+    
     
     leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 44)];
     leftBtn.titleLabel.textAlignment = NSTextAlignmentLeft;
@@ -524,13 +532,17 @@
     [leftBtn addTarget:self action:@selector(leftNavEvent) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(rightBtnEvent)];
-
-    
 }
 
 - (void)setFooerView:(BLPhotoListFooterView *)fooerView {
     _fooerView = fooerView;
     _fooerView.delegate = self;
+}
+
+-(void)disPlayCurVerson{
+    DDLOG(@"-----------------------------------------BLImagePickerLib----------------------------------------");
+    DDLOG(@"-----------------------------------------------V%@--------------------------------------------",curVerson);
+    DDLOG(@"-------------------git:%@----------------------",@"https://github.com/IceTears1/BLImagePickerController");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

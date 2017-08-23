@@ -54,6 +54,7 @@
     CGSize imageSize = CGSizeMake(200 , 200);
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
     options.synchronous = YES;
+    options.networkAccessAllowed = YES;//允许从icloud 下载
     options.resizeMode = PHImageRequestOptionsResizeModeFast;
     if (result.count > 0) {
         PHAsset *asset = result.firstObject;

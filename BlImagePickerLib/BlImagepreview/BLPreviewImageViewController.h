@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, BL_PreviewImageType) {
 
 @interface BLPreviewImageViewController : BLPickerBaseViewController
 
-
+@property (nonatomic, assign) BOOL isOriginal;
 @property (nonatomic, assign) BL_PreviewImageType previewType;
 @property (nonatomic, assign) NSInteger previewIndex;
 @property (nonatomic, weak) id<BLPreviewImageViewControllerDelegate>delegate;

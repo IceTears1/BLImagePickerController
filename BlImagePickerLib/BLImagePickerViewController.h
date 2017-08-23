@@ -4,6 +4,7 @@
 //
 //  Created by 冰泪 on 2017/7/18.
 //  Copyright © 2017年 冰泪. All rights reserved.
+
 //BLImagePickerLib讲解:https://my.oschina.net/iceTear/blog/1498504
 //我的博客:https://my.oschina.net/iceTear/blog
 //git：https://github.com/IceTears1/BLImagePickerController
@@ -23,6 +24,7 @@
 @property (nonatomic,copy)BLSelectImageLoading progressBlock;//照片选择完成
 @property (nonatomic,copy)BLCancle cancleBlock;//取消
 
+
 /*
  @itemSize  拿到的图片的大小
  @默认 原图（比较大慎用）
@@ -39,6 +41,13 @@
  @注意 目前仅限获取相册 单张图片或者相机获取的图片时候使用
  */
 @property (nonatomic,assign)BOOL imageClipping;
+
+/*
+ @imageClippingScale  图片剪裁页面图片可放大的倍数
+ @默认 2.0
+ 只有图片剪裁页面生效
+ */
+@property (nonatomic,assign)CGFloat imageClippingScale;
 
 /*
  @clippingItemSize  图片剪裁大小
@@ -76,6 +85,19 @@
 @property (nonatomic,assign)BOOL showCamera;
 
 /*
+ @ 预览时候 强制显示原图
+ @默认 no
+ */
+@property (nonatomic,assign)BOOL showOrignal;
+
+/*
+ @ 是否显示查看原图的按钮
+ @默认 no
+注意 showOrignal = yes 时候 showOrignalBtn将不起作用
+ */
+@property (nonatomic,assign)BOOL showOrignalBtn;
+
+/*
  @ 图片预览放大倍数
  默认2.0
  */
@@ -101,4 +123,6 @@
 @property (nonatomic,strong)NSString *photoAlbumMassage;
 
 
+
+- (void)disPlayCurVerson;
 @end

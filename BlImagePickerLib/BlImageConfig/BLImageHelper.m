@@ -191,6 +191,8 @@
     self.currentGroupTitle = @"";
     self.minScale = 1.0;
     self.maxScale = 2.0;
+    self.showOrignal = NO;
+    self.showOrignalBtn = NO;
 }
 
 @end
