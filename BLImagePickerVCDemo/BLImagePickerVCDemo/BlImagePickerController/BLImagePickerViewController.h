@@ -4,6 +4,10 @@
 //
 //  Created by 冰泪 on 2017/7/18.
 //  Copyright © 2017年 冰泪. All rights reserved.
+
+//BLImagePickerLib讲解:https://my.oschina.net/iceTear/blog/1498504
+//我的博客:https://my.oschina.net/iceTear/blog
+//git：https://github.com/IceTears1/BLImagePickerController
 //
 
 #import <UIKit/UIKit.h>
@@ -78,6 +82,19 @@
  @ 显示相机
  */
 @property (nonatomic,assign)BOOL showCamera;
+
+/*
+ @ 预览时候 强制显示原图
+ @默认 no
+ */
+@property (nonatomic,assign)BOOL showOrignal;
+
+/*
+ @ 是否显示查看原图的按钮
+ @默认 no
+注意 showOrignal = yes 时候 showOrignalBtn将不起作用
+ */
+@property (nonatomic,assign)BOOL showOrignalBtn;
 
 /*
  @ 图片预览放大倍数

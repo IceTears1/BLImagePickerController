@@ -4,6 +4,9 @@
 //
 //  Created by 冰泪 on 2017/7/18.
 //  Copyright © 2017年 冰泪. All rights reserved.
+//BLImagePickerLib讲解:https://my.oschina.net/iceTear/blog/1498504
+//我的博客:https://my.oschina.net/iceTear/blog
+//git：https://github.com/IceTears1/BLImagePickerController
 //
 
 #import <UIKit/UIKit.h>

@@ -16,10 +16,14 @@ typedef NS_ENUM(NSInteger, BLTapType){
 @protocol BLPhotoListFooterViewDelegate <NSObject>
 @required
 - (void)BL_photoListFooterViewTapWithType:(BLTapType)type;
+
+- (void)BL_photoListFooterViewShowOriginal:(BOOL)isOriginal;
 @end
 
 
 @interface BLPhotoListFooterView : UIView
+
+
 
 @property (nonatomic, weak) id<BLPhotoListFooterViewDelegate>delegate;
 - (void)initFooterWithCount:(NSInteger)count;

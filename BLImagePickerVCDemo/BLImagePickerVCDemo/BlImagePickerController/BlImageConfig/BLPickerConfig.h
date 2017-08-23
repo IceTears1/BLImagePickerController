@@ -40,6 +40,7 @@
 #import "PHAsset+AddFlag.h"
 #import "BLImageHelper.h"
 #import "BLTransitionAnimator.h"
+#import "UIView+Addition.h"
 
 //typedef NS_ENUM(NSInteger, BL_PreviewImageType) {
 //    BL_PreviewImageTypeSome,

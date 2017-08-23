@@ -24,22 +24,18 @@
 
 @property (nonatomic, assign) NSInteger scrollFlag;
 
-@property (nonatomic, assign) BOOL isOriginal;
+
 
 @end
 
 @implementation BLPreviewImageViewController
 -(void)screenChanges{
     [UIView performWithoutAnimation:^{
-        //DDLOG(@"2222-------------- %f",SCREEN_WIDTH);
         [self.collectionView reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.previewIndex inSection:0]]];
         
     }];
-
+    
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:self.previewIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
-    
-    
-    //    DDLOG(@"111111111111111-------------- %ld",self.previewIndex);
     if (self.previewType == BL_PreviewAll) {
         
         [self.topView initHeaderWihtDataSource:[BLImageHelper shareImageHelper].phassetArr withIndexPath:[NSIndexPath indexPathForItem:self.previewIndex inSection:0]];
@@ -55,7 +51,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"预览";
-    self.isOriginal = YES;
+    //    self.isOriginal = YES;
     self.scrollFlag = 1;
     [self.footerView initFooterWithCount:[BLImageHelper shareImageHelper].phassetChoosedArr.count];
     if (self.previewType == BL_PreviewAll) {
@@ -156,7 +152,7 @@
             weakSelf.footerViewHight.constant = 45;
         }
     }];
-
+    
 }
 
 #pragma mark    头部view 返回按钮和 选择 按钮代理
@@ -174,12 +170,12 @@
     if (self.delegate) {
         [self.delegate BL_previewImageVCRefreshType:self.previewType Item:indexPath];
     }
-//    PHAsset *assetString = [BLImageHelper shareImageHelper].phassetArr[indexPath.row];
-//    assetString.chooseFlag = NO;
-//    [[BLImageHelper shareImageHelper].phassetArr replaceObjectAtIndex:indexPath.row withObject:assetString];
-//    [UIView performWithoutAnimation:^{
-//        [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
-//    }];
+    //    PHAsset *assetString = [BLImageHelper shareImageHelper].phassetArr[indexPath.row];
+    //    assetString.chooseFlag = NO;
+    //    [[BLImageHelper shareImageHelper].phassetArr replaceObjectAtIndex:indexPath.row withObject:assetString];
+    //    [UIView performWithoutAnimation:^{
+    //        [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    //    }];
     
 }
 #pragma mark    底部view 发送按钮代理

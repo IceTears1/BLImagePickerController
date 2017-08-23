@@ -10,6 +10,7 @@
 		1C5D83929C97C2F216AD984A /* libPods-BLImagePickerVCDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2792316F50A06CE8E12B3F3B /* libPods-BLImagePickerVCDemo.a */; };
 		7EAE50F7230BB1F1A5D11A1D /* libPods-BLImagePickerVCDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4434036F3495CB2CD8D2FE /* libPods-BLImagePickerVCDemoUITests.a */; };
 		8D03D7011F2EF48F00BC0CF5 /* SelectedImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03D7001F2EF48F00BC0CF5 /* SelectedImageVC.m */; };
+		8D8419681F4D1C3C00C888F3 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8419671F4D1C3C00C888F3 /* UIView+Addition.m */; };
 		8DB07C921F2ECABF00EDA00E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07C911F2ECABF00EDA00E /* main.m */; };
 		8DB07C951F2ECABF00EDA00E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07C941F2ECABF00EDA00E /* AppDelegate.m */; };
 		8DB07C981F2ECABF00EDA00E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB07C971F2ECABF00EDA00E /* ViewController.m */; };
@@ -68,6 +69,8 @@
 		7E4434036F3495CB2CD8D2FE /* libPods-BLImagePickerVCDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLImagePickerVCDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D03D6FF1F2EF48F00BC0CF5 /* SelectedImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedImageVC.h; sourceTree = "<group>"; };
 		8D03D7001F2EF48F00BC0CF5 /* SelectedImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedImageVC.m; sourceTree = "<group>"; };
+		8D8419661F4D1C3C00C888F3 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		8D8419671F4D1C3C00C888F3 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		8DB07C8D1F2ECABF00EDA00E /* BLImagePickerVCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLImagePickerVCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB07C911F2ECABF00EDA00E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DB07C931F2ECABF00EDA00E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -189,6 +192,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8D8419651F4D1C3C00C888F3 /* UIview+Addtion */ = {
+			isa = PBXGroup;
+			children = (
+				8D8419661F4D1C3C00C888F3 /* UIView+Addition.h */,
+				8D8419671F4D1C3C00C888F3 /* UIView+Addition.m */,
+			);
+			path = "UIview+Addtion";
+			sourceTree = "<group>";
+		};
 		8DB07C841F2ECABF00EDA00E = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB07CC81F2ECB2600EDA00E /* Assets.xcassets */,
+				8D8419651F4D1C3C00C888F3 /* UIview+Addtion */,
 				8DB07CD11F2ECB2600EDA00E /* BLImagePicker.storyboard */,
 				8DB07CC91F2ECB2600EDA00E /* BLImageHelper.h */,
 				8DB07CCA1F2ECB2600EDA00E /* BLImageHelper.m */,
@@ -658,6 +671,7 @@
 				8DB07D061F2ECB2600EDA00E /* BLPreviewImageViewController.m in Sources */,
 				8DB07D031F2ECB2600EDA00E /* BLPreviewImageCell.m in Sources */,
 				8DB07D081F2ECB2600EDA00E /* BLPhotoGroupCell.m in Sources */,
+				8D8419681F4D1C3C00C888F3 /* UIView+Addition.m in Sources */,
 				8DB07D0C1F2ECB2600EDA00E /* BLTabBarTransitionAnimator.m in Sources */,
 				8DB07D091F2ECB2600EDA00E /* BLDIYTrasitionAnimation.m in Sources */,
 				8DB07CFC1F2ECB2600EDA00E /* BLPickerBaseViewController.m in Sources */,

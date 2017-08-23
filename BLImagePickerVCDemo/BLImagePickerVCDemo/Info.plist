@@ -23,9 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>1111</string>
+	<string>请允许app 调用相机权限</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>11111</string>
+	<string>请允许app调用相册权限</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

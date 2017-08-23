@@ -51,4 +51,6 @@
 @property (nonatomic,assign)CGFloat maxScale;
 @property (nonatomic,assign)CGFloat minScale;
 
+@property (nonatomic,assign)BOOL showOrignal;//强制使用原图
+@property (nonatomic,assign)BOOL showOrignalBtn;//时候显示查看原图的按钮
 @end

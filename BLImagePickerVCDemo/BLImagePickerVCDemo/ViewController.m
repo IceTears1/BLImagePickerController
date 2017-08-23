@@ -24,7 +24,7 @@
     [super viewDidLoad];
     //    self.view.backgroundColor = [UIColor redColor];
     
-    [self.dataSource addObjectsFromArray:@[@"选择 单张图片 不剪裁",@"选择 单张图片+相机 不剪裁",@"选择 单张图片 剪裁",@"选择 单张图片+相机 剪裁",@"选择5张图片不带相机",@"选择5张图片带相机"]];
+    [self.dataSource addObjectsFromArray:@[@"选择 单张图片 不剪裁",@"选择 单张图片+相机 不剪裁",@"选择 单张图片 剪裁",@"选择 单张图片+相机 剪裁",@"选择5张图片不带相机",@"选择5张图片带相机",@"选择5张图片带相机+预览原图 按钮",@"选择5张图片带相机+强制预览原图"]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -96,7 +96,28 @@
             imgVc.maxNum = 5;
             imgVc.maxScale = 2.0;
             imgVc.minScale = 0.5; 
-            
+        }
+            break;
+        case 6:
+        {
+            //选择 5张图片+相机+选择预览原图 按钮
+            imgVc.imageClipping = YES;
+            imgVc.showCamera = YES;
+            imgVc.maxNum = 5;
+            imgVc.maxScale = 2.0;
+            imgVc.minScale = 0.5;
+            imgVc.showOrignalBtn = YES;
+        }
+            break;
+        case 7:
+        {
+            //选择 5张图片+相机+强制预览原图
+            imgVc.imageClipping = YES;
+            imgVc.showCamera = YES;
+            imgVc.maxNum = 5;
+            imgVc.maxScale = 2.0;
+            imgVc.minScale = 0.5;
+            imgVc.showOrignal = YES;
         }
             break;
             
@@ -105,13 +126,15 @@
     }
     __weak typeof(self) weakSelf = self;
     [imgVc initDataProgress:^(CGFloat progress) {
+        
         [SVProgressHUD showProgress:progress];
         [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-    } finished:^(NSArray<UIImage *> *resultAry, NSArray<PHAsset *> *assetsArry, UIImage *editedImage) {
-        [SVProgressHUD dismiss];
-        DDLOG(@"%@",assetsArry);
-        SelectedImageVC *vc = [[SelectedImageVC alloc]init];
         
+    } finished:^(NSArray<UIImage *> *resultAry, NSArray<PHAsset *> *assetsArry, UIImage *editedImage) {
+        
+        [SVProgressHUD dismiss];
+//        DDLOG(@"%@",assetsArry);
+        SelectedImageVC *vc = [[SelectedImageVC alloc]init];
         if (resultAry) {
             vc.dataSource = [NSMutableArray arrayWithArray:resultAry];
             [weakSelf.navigationController pushViewController:vc animated:YES];
@@ -122,7 +145,7 @@
         }
         
     } cancle:^(NSString *cancleStr) {
-        DDLOG(@"取消了");
+//        DDLOG(@"取消了");
     }];
   [self presentViewController:nav animated:YES completion:nil];
 }

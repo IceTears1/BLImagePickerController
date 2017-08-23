@@ -409,7 +409,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 BLImageClipingViewController *vc = [[BLImageClipingViewController alloc]initWithImage:result cropFrame:weakSelf.clippingItemSize limitScaleRatio:2];
                 vc.delegate = weakSelf;
-                [weakSelf.navigationController BL_pushViewController:vc AnimatorStyle:BLTransitionAnimatorBottom animated:YES];
+                [weakSelf.navigationController BL_pushViewController:vc AnimatorStyle:BLTransitionAnimatorBottom animated:NO];
             });
             
             
