@@ -456,7 +456,6 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSInteger i=1;
         for (PHAsset *asset in [BLImageHelper shareImageHelper].phassetChoosedArr) {
-            
             CGSize imageSize = self.itemSize;
             if ((self.itemSize.width > 0)&&(self.itemSize.height > 0)) {
                 [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:imageSize contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
