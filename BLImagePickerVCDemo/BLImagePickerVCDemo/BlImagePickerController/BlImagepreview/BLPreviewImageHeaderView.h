@@ -29,4 +29,5 @@
 @property (nonatomic,strong)NSIndexPath *IndexPath;
 
 @property (nonatomic, strong)UIViewController *superVC;
+
 @end

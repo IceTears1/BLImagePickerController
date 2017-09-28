@@ -27,5 +27,7 @@ typedef NS_ENUM(NSInteger, BL_PreviewImageType) {
 @property (nonatomic, assign) BL_PreviewImageType previewType;
 @property (nonatomic, assign) NSInteger previewIndex;
 @property (nonatomic, weak) id<BLPreviewImageViewControllerDelegate>delegate;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *headerVIewHight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewTop;
 
 @end

@@ -52,6 +52,16 @@
     [super viewDidLoad];
     self.title = @"预览";
     //    self.isOriginal = YES;
+    if(IOS11){
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    if (is_iPhoneX) {
+        self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        self.headerVIewHight.constant = 88;
+        self.topViewTop.constant = -44;
+    }
     self.scrollFlag = 1;
     [self.footerView initFooterWithCount:[BLImageHelper shareImageHelper].phassetChoosedArr.count];
     if (self.previewType == BL_PreviewAll) {
@@ -126,7 +136,13 @@
 
 #pragma mark    UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(SCREEN_WIDTH , SCREEN_HEIGHT-45);
+    if (is_iPhoneX) {
+        return CGSizeMake(SCREEN_WIDTH-0.001*2 , SCREEN_HEIGHT-24);
+        
+    }else{
+        return CGSizeMake(SCREEN_WIDTH-0.001*2 , SCREEN_HEIGHT-45);
+    }
+    
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(0, 0, 0, 0);
@@ -149,7 +165,13 @@
         if(weakSelf.footerView.hidden){
             weakSelf.footerViewHight.constant = 0;
         }else{
-            weakSelf.footerViewHight.constant = 45;
+            if (is_iPhoneX) {
+                weakSelf.footerViewHight.constant = 45;
+                
+            }else{
+                weakSelf.footerViewHight.constant = 45;
+            }
+            
         }
     }];
     

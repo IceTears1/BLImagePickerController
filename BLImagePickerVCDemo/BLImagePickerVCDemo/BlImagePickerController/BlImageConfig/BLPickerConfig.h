@@ -17,6 +17,12 @@
 #define CELL_COLLECTION_WIDTH   ((([UIScreen mainScreen].bounds.size.width<[UIScreen mainScreen].bounds.size.height?[UIScreen mainScreen].bounds.size.width:[UIScreen mainScreen].bounds.size.height)-20) / 6.0)
 #define CELL_COLLECTION_WIDTH_IPHONE   ((([UIScreen mainScreen].bounds.size.width<[UIScreen mainScreen].bounds.size.height?[UIScreen mainScreen].bounds.size.width:[UIScreen mainScreen].bounds.size.height)-20) / 4.0)
 
+#define is_iPhoneX [UIScreen mainScreen].bounds.size.width == 375.0f && [UIScreen mainScreen].bounds.size.height == 812.0f
+
+#define IOS8 ([[UIDevice currentDevice].systemVersion intValue] >= 8 ? YES : NO)
+
+#define IOS11 @available(iOS 11.0, *)
+//([[UIDevice currentDevice].systemVersion intValue] >= 11 ? YES : NO)
 //在iphone上面运行
 #define IS_IPHONE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ? YES : NO)
 
