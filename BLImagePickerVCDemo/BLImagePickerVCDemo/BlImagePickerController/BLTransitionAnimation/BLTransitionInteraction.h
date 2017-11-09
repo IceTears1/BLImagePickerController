@@ -9,7 +9,7 @@
 #import "BLTrasitionAnimatorConfig.h"
 #import <UIKit/UIKit.h>
 
-typedef void(^GestureConifg)();
+typedef void(^GestureConifg)(NSString *str);
 @interface BLTransitionInteraction : UIPercentDrivenInteractiveTransition
 
 @property (nonatomic, weak) UIViewController *vc;

@@ -14,8 +14,7 @@
 #import "BLPickerBaseViewController.h"
 #import "BLPickerConfig.h"
 
-
-
+NS_ASSUME_NONNULL_BEGIN
 @interface BLImagePickerViewController : BLPickerBaseViewController
 
 -(void)initDataProgress:(BLSelectImageLoading)progressBlock finished:(BLSelectImageFinishedBlock)finishedBlock cancle:(BLCancle)cancleBlock;
@@ -23,7 +22,6 @@
 @property (nonatomic,copy)BLSelectImageFinishedBlock finishedBlock;//照片选择完成
 @property (nonatomic,copy)BLSelectImageLoading progressBlock;//照片选择完成
 @property (nonatomic,copy)BLCancle cancleBlock;//取消
-
 
 /*
  @itemSize  拿到的图片的大小
@@ -77,7 +75,7 @@
  @navColor  导航栏的title
  @默认相册的名字
  */
-@property (nonatomic,strong)NSString *navTitle;
+@property (nonatomic,copy)NSString *navTitle;
 
 /*
  @ 显示相机
@@ -114,15 +112,16 @@
  @默认
  无法获取相机功能请在iphone/ipad的“设置-隐私-相机”选项中允许 “app名字” 访问您的相机"
  */
-@property (nonatomic,strong)NSString *cameraMassage;
+@property (nonatomic,copy)NSString *cameraMassage;
 /*
  @ 无法获取相册权限时候的提示语
  @默认
  无法获取相册功能请在“iphone/ipad“的设置-隐私-相册”选项中允许 ”app名字“ 访问您的相册"
  */
-@property (nonatomic,strong)NSString *photoAlbumMassage;
+@property (nonatomic,copy)NSString *photoAlbumMassage;
 
 
 
 - (void)disPlayCurVerson;
 @end
+NS_ASSUME_NONNULL_END

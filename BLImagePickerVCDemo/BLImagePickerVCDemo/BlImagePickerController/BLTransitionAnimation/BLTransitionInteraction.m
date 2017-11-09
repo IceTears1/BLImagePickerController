@@ -97,7 +97,7 @@
     switch (_type) {
         case BLTransitionTypePresent:{
             if (_presentConifg) {
-                _presentConifg();
+                _presentConifg(@"1");
             }
         }
             break;
@@ -107,7 +107,7 @@
             break;
         case BLTransitionTypePush:{
             if (_pushConifg) {
-                _pushConifg();
+                _pushConifg(@"a");
             }
         }
             break;

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "BLImagePickerViewController.h"
+#import "BLImageClipingViewController.h"
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate,BLImageClipingViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong)NSMutableArray *dataSource;
